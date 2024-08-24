@@ -1,0 +1,20 @@
+### General Code Base ###
+*.dist/
+*.vscode/
+
+### Django ###
+.env
+*.egg-info
+*.log
+*.pot
+*.pyc
+*.pyo
+.idea
+__pycache__/
+
+local_settings.py
+production_settings.py
+settings_secret.py
+db.sqlite3
+privatefiles/
+Pipfile.lock

@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
+pillow = "*"
+celery = {extras = ["redis"], version = "*"}
+django-tinymce = "*"
+drf-spectacular = {extras = ["sidecar"], version = "*"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
