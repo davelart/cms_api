@@ -82,6 +82,7 @@ urlpatterns = [
     path('', RedirectView.as_view(pattern_name='docs')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('docs/', SpectacularRedocView.as_view(url_name='schema'), name='docs'),
+    path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger'),
     path('tinymce/', include('tinymce.urls')),
 ]
 
