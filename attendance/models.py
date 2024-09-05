@@ -2,11 +2,11 @@ from django.db import models
 from django.utils import timezone
 
 from branches.models import Branches
-from churchprofile.models import ChurchProfile
+from accounts.models import Church
 from members.models import Member
 
 class AttendanceProgram(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name='attendanceprogram_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='attendanceprogram_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='attendanceprogram_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	programid = models.IntegerField(blank=True, null=True, default=0 )
 	date = models.DateField(null=True, blank=True, default=timezone.now)
@@ -22,7 +22,7 @@ class AttendanceProgram(models.Model):
 		return self.attendancetype
 
 class Attendance(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name='attendance_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='attendance_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='attendance_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	attendancetype = models.CharField(max_length=255, blank=True, null=True, default='Church Attendance' )
 	attendantid = models.CharField(max_length=100, blank=True, null=True)

@@ -2,10 +2,10 @@ from django.db import models
 from django.utils import timezone
 
 from branches.models import Branches
-from churchprofile.models import ChurchProfile
+from accounts.models import Church
 
 class NotifierSettings(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name='notifier_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='notifier_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='notifier_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	sms_sender = models.CharField(max_length=11, default='ChAffairs' )
 	sms_verification = models.BooleanField(blank=True, default=False)
@@ -22,7 +22,7 @@ class NotifierSettings(models.Model):
 		return str(self.church.churchname)
 
 class SmsSent(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name='smssent_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='smssent_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='smssent_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	senderid = models.CharField(max_length=255, blank=True, null=True )
 	message = models.TextField(max_length=255, blank=True, null=True )
@@ -35,7 +35,7 @@ class SmsSent(models.Model):
 		return self.senderid
 
 class EmailSent(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name='emailsent_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='emailsent_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='emailsent_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)	
 	subject = models.CharField(max_length=255, blank=True, null=True )
 	message = models.TextField(max_length=255, blank=True, null=True )
@@ -49,7 +49,7 @@ class EmailSent(models.Model):
 		return self.subject
 
 class PushSent(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name='pushnotif_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='pushnotif_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='pushnotif_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	deviceid = models.CharField(max_length=255, blank=True, null=True )
 	mediafile =  models.FileField(upload_to = 'chaffairsmedia/', blank=True, null=True)

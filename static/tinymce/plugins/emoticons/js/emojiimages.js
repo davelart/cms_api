@@ -2012,7 +2012,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "people"
   },
   mortar_board: {
-    keywords: [ "school", "college", "degree", "university", "graduation", "cap", "hat", "legal", "learn", "education" ],
+    keywords: [ "church", "college", "degree", "university", "graduation", "cap", "hat", "legal", "learn", "education" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83c\udf93" src="1f393.png"/>',
     fitzpatrick_scale: false,
     category: "people"
@@ -2023,7 +2023,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "people"
   },
-  school_satchel: {
+  church_satchel: {
     keywords: [ "student", "education", "bag", "backpack" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83c\udf92" src="1f392.png"/>',
     fitzpatrick_scale: false,
@@ -3158,7 +3158,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "food_and_drink"
   },
   apple: {
-    keywords: [ "fruit", "mac", "school" ],
+    keywords: [ "fruit", "mac", "church" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83c\udf4e" src="1f34e.png"/>',
     fitzpatrick_scale: false,
     category: "food_and_drink"
@@ -5011,7 +5011,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "travel_and_places"
   },
-  school: {
+  church: {
     keywords: [ "building", "student", "education", "learn", "teach" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83c\udfeb" src="1f3eb.png"/>',
     fitzpatrick_scale: false,
@@ -5138,7 +5138,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   floppy_disk: {
-    keywords: [ "oldschool", "technology", "save", "90s", "80s" ],
+    keywords: [ "oldchurch", "technology", "save", "90s", "80s" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\udcbe" src="1f4be.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
@@ -5156,7 +5156,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   vhs: {
-    keywords: [ "record", "video", "oldschool", "90s", "80s" ],
+    keywords: [ "record", "video", "oldchurch", "90s", "80s" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\udcfc" src="1f4fc.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
@@ -5210,7 +5210,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   pager: {
-    keywords: [ "bbcall", "oldschool", "90s" ],
+    keywords: [ "bbcall", "oldchurch", "90s" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\udcdf" src="1f4df.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
@@ -5222,7 +5222,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   tv: {
-    keywords: [ "technology", "program", "oldschool", "show", "television" ],
+    keywords: [ "technology", "program", "oldchurch", "show", "television" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\udcfa" src="1f4fa.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
@@ -5282,13 +5282,13 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   hourglass_flowing_sand: {
-    keywords: [ "oldschool", "time", "countdown" ],
+    keywords: [ "oldchurch", "time", "countdown" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\u23f3" src="23f3.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
   },
   hourglass: {
-    keywords: [ "time", "clock", "oldschool", "limit", "exam", "quiz", "test" ],
+    keywords: [ "time", "clock", "oldchurch", "limit", "exam", "quiz", "test" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\u231b" src="231b.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
@@ -6152,7 +6152,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   straight_ruler: {
-    keywords: [ "stationery", "calculate", "length", "math", "school", "drawing", "architect", "sketch" ],
+    keywords: [ "stationery", "calculate", "length", "math", "church", "drawing", "architect", "sketch" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\udccf" src="1f4cf.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
@@ -6248,7 +6248,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   pencil2: {
-    keywords: [ "stationery", "write", "paper", "writing", "school", "study" ],
+    keywords: [ "stationery", "write", "paper", "writing", "church", "study" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\u270f\ufe0f" src="270f.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
@@ -6854,7 +6854,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "symbols"
   },
   children_crossing: {
-    keywords: [ "school", "warning", "danger", "sign", "driving", "yellow-diamond" ],
+    keywords: [ "church", "warning", "danger", "sign", "driving", "yellow-diamond" ],
     char: '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\udeb8" src="1f6b8.png"/>',
     fitzpatrick_scale: false,
     category: "symbols"

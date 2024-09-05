@@ -7,12 +7,12 @@ from drf_spectacular.utils import extend_schema, extend_schema_view
 
 # Create your views here.
 @extend_schema_view(
-    list=extend_schema(tags=['BranchReport'], summary='List all BranchReports'),
-    create=extend_schema(tags=['BranchReport'], summary='Create a BranchReport'),
-    retrieve=extend_schema(tags=['BranchReport'], summary='Get a BranchReport', examples=[]),
-    update=extend_schema(tags=['BranchReport'], summary='Update a BranchReport', examples=[]),
-    partial_update=extend_schema(tags=['BranchReport'], summary='Patch a BranchReport', examples=[]),
-    destroy=extend_schema(tags=['BranchReport'], summary='Delete a BranchReport', examples=[]),
+    list=extend_schema(tags=['Branch Report'], summary='List all Branch Reports'),
+    create=extend_schema(tags=['Branch Report'], summary='Create a Branch Report'),
+    retrieve=extend_schema(tags=['Branch Report'], summary='Get a Branch Report', examples=[]),
+    update=extend_schema(tags=['Branch Report'], summary='Update a Branch Report', examples=[]),
+    partial_update=extend_schema(tags=['Branch Report'], summary='Patch a Branch Report', examples=[]),
+    destroy=extend_schema(tags=['Branch Report'], summary='Delete a Branch Report', examples=[]),
 )
 class BranchReportsViewSet(ModelViewSet):
     

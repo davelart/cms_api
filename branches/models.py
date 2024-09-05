@@ -6,7 +6,7 @@ from django.dispatch import receiver
 from django.utils import timezone
 from branches.utils import generate_slug
 from datetime import datetime, timedelta
-from churchprofile.models import ChurchProfile
+from accounts.models import Church
 
 
 
@@ -15,7 +15,7 @@ class Branches(models.Model):
 	# paymentplan choices
 	PAYMENT_PLAN_CHOICES = (('Basic','Basic'),('Gold','Gold'), ('Diamond','Diamond'))
 	
-	church = models.ForeignKey(ChurchProfile, related_name='branches_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='branches_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	subhead = models.CharField(max_length=50, blank=True, null=True)
 	branchname = models.CharField(max_length=255, blank=True, null=True )
 	subheadalias = models.CharField(max_length=255, blank=True, null=True )
@@ -84,7 +84,7 @@ class Branches(models.Model):
 		return self.slug
 
 class BranchUser(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name="chuserprofile", default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name="chuserprofile", default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name="chuserbranch", default='' , on_delete=models.PROTECT)
 	user = models.OneToOneField(User, related_name="branchprofile", default='', blank=True, null=True, on_delete=models.SET_NULL)
 	memberid = models.CharField(max_length=100, null=True, blank=True) 

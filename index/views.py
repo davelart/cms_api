@@ -40,12 +40,12 @@ class FeaturesViewSet(ModelViewSet):
         return Features.objects.all()
     
 @extend_schema_view(
-    list=extend_schema(tags=['EmailSubscription'], summary='List all EmailSubscriptions'),
-    create=extend_schema(tags=['EmailSubscription'], summary='Create a EmailSubscription'),
-    retrieve=extend_schema(tags=['EmailSubscription'], summary='Get a EmailSubscription', examples=[]),
-    update=extend_schema(tags=['EmailSubscription'], summary='Update a EmailSubscription', examples=[]),
-    partial_update=extend_schema(tags=['EmailSubscription'], summary='Patch a EmailSubscription', examples=[]),
-    destroy=extend_schema(tags=['EmailSubscription'], summary='Delete a EmailSubscription', examples=[]),
+    list=extend_schema(tags=['Email Subscription'], summary='List all Email Subscriptions'),
+    create=extend_schema(tags=['Email Subscription'], summary='Create a Email Subscription'),
+    retrieve=extend_schema(tags=['Email Subscription'], summary='Get a Email Subscription', examples=[]),
+    update=extend_schema(tags=['Email Subscription'], summary='Update a Email Subscription', examples=[]),
+    partial_update=extend_schema(tags=['Email Subscription'], summary='Patch a Email Subscription', examples=[]),
+    destroy=extend_schema(tags=['Email Subscription'], summary='Delete a Email Subscription', examples=[]),
 )
 class EmailSubscriptionsViewSet(ModelViewSet):
     

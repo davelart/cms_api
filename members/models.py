@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from churchprofile.models import *
+from accounts.models import *
 from branches.models import *
 
 # Create your models here.
@@ -10,7 +10,7 @@ class Member(models.Model):
     #gender choices
     GENDER_CHOICES = (('Male', 'Male'), ('Female', 'Female'), ('None', 'None'))
     
-    church = models.ForeignKey(ChurchProfile, related_name='members_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+    church = models.ForeignKey(Church, related_name='members_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
     branch = models.ForeignKey(Branches, related_name='member_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)	
     memberid = models.CharField(max_length=100, blank=True, null=True )
     deviceid = models.CharField(max_length=100, blank=True, null=True )

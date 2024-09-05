@@ -6,12 +6,12 @@ from rest_framework.viewsets import ModelViewSet
 from drf_spectacular.utils import extend_schema, extend_schema_view
 
 @extend_schema_view(
-    list=extend_schema(tags=['AdvancedUser'], summary='List all AdvancedUsers'),
-    create=extend_schema(tags=['AdvancedUser'], summary='Create a AdvancedUser'),
-    retrieve=extend_schema(tags=['AdvancedUser'], summary='Get a AdvancedUser', examples=[]),
-    update=extend_schema(tags=['AdvancedUser'], summary='Update a AdvancedUser', examples=[]),
-    partial_update=extend_schema(tags=['AdvancedUser'], summary='Patch a AdvancedUser', examples=[]),
-    destroy=extend_schema(tags=['AdvancedUser'], summary='Delete a AdvancedUser', examples=[]),
+    list=extend_schema(tags=['Advanced User'], summary='List all Advanced Users'),
+    create=extend_schema(tags=['Advanced User'], summary='Create a Advanced User'),
+    retrieve=extend_schema(tags=['Advanced User'], summary='Get a Advanced User', examples=[]),
+    update=extend_schema(tags=['Advanced User'], summary='Update a Advanced User', examples=[]),
+    partial_update=extend_schema(tags=['Advanced User'], summary='Patch a Advanced User', examples=[]),
+    destroy=extend_schema(tags=['Advanced User'], summary='Delete a Advanced User', examples=[]),
 )
 class AdvancedUsersViewSet(ModelViewSet):
     
@@ -23,12 +23,12 @@ class AdvancedUsersViewSet(ModelViewSet):
         return AdvancedUser.objects.all()
     
 @extend_schema_view(
-    list=extend_schema(tags=['SalesUserAccount'], summary='List all SalesUserAccounts'),
-    create=extend_schema(tags=['SalesUserAccount'], summary='Create a SalesUserAccount'),
-    retrieve=extend_schema(tags=['SalesUserAccount'], summary='Get a SalesUserAccount', examples=[]),
-    update=extend_schema(tags=['SalesUserAccount'], summary='Update a SalesUserAccount', examples=[]),
-    partial_update=extend_schema(tags=['SalesUserAccount'], summary='Patch a SalesUserAccount', examples=[]),
-    destroy=extend_schema(tags=['SalesUserAccount'], summary='Delete a SalesUserAccount', examples=[]),
+    list=extend_schema(tags=['Sales User Account'], summary='List all Sales User Accounts'),
+    create=extend_schema(tags=['Sales User Account'], summary='Create a Sales User Account'),
+    retrieve=extend_schema(tags=['Sales User Account'], summary='Get a Sales User Account', examples=[]),
+    update=extend_schema(tags=['Sales User Account'], summary='Update a Sales User Account', examples=[]),
+    partial_update=extend_schema(tags=['Sales User Account'], summary='Patch a Sales User Account', examples=[]),
+    destroy=extend_schema(tags=['Sales User Account'], summary='Delete a Sales User Account', examples=[]),
 )
 class SalesUserAccountsViewSet(ModelViewSet):
     
@@ -57,12 +57,12 @@ class SalesViewSet(ModelViewSet):
         return Sales.objects.all()
     
 @extend_schema_view(
-    list=extend_schema(tags=['TechChatTicket'], summary='List all TechChatTickets'),
-    create=extend_schema(tags=['TechChatTicket'], summary='Create a TechChatTicket'),
-    retrieve=extend_schema(tags=['TechChatTicket'], summary='Get a TechChatTicket', examples=[]),
-    update=extend_schema(tags=['TechChatTicket'], summary='Update a TechChatTicket', examples=[]),
-    partial_update=extend_schema(tags=['TechChatTicket'], summary='Patch a TechChatTicket', examples=[]),
-    destroy=extend_schema(tags=['TechChatTicket'], summary='Delete a TechChatTicket', examples=[]),
+    list=extend_schema(tags=['Tech Chat Ticket'], summary='List all Tech Chat Tickets'),
+    create=extend_schema(tags=['Tech Chat Ticket'], summary='Create a Tech Chat Ticket'),
+    retrieve=extend_schema(tags=['Tech Chat Ticket'], summary='Get a Tech Chat Ticket', examples=[]),
+    update=extend_schema(tags=['Tech Chat Ticket'], summary='Update a Tech Chat Ticket', examples=[]),
+    partial_update=extend_schema(tags=['Tech Chat Ticket'], summary='Patch a Tech Chat Ticket', examples=[]),
+    destroy=extend_schema(tags=['Tech Chat Ticket'], summary='Delete a Tech Chat Ticket', examples=[]),
 )
 class TechChatTicketsViewSet(ModelViewSet):
     
@@ -74,12 +74,12 @@ class TechChatTicketsViewSet(ModelViewSet):
         return TechChatTicket.objects.all()
     
 @extend_schema_view(
-    list=extend_schema(tags=['TechChat'], summary='List all TechChats'),
-    create=extend_schema(tags=['TechChat'], summary='Create a TechChat'),
-    retrieve=extend_schema(tags=['TechChat'], summary='Get a TechChat', examples=[]),
-    update=extend_schema(tags=['TechChat'], summary='Update a TechChat', examples=[]),
-    partial_update=extend_schema(tags=['TechChat'], summary='Patch a TechChat', examples=[]),
-    destroy=extend_schema(tags=['TechChat'], summary='Delete a TechChat', examples=[]),
+    list=extend_schema(tags=['Tech Chat'], summary='List all Tech Chats'),
+    create=extend_schema(tags=['Tech Chat'], summary='Create a Tech Chat'),
+    retrieve=extend_schema(tags=['Tech Chat'], summary='Get a Tech Chat', examples=[]),
+    update=extend_schema(tags=['Tech Chat'], summary='Update a Tech Chat', examples=[]),
+    partial_update=extend_schema(tags=['Tech Chat'], summary='Patch a Tech Chat', examples=[]),
+    destroy=extend_schema(tags=['Tech Chat'], summary='Delete a Tech Chat', examples=[]),
 )
 class TechChatsViewSet(ModelViewSet):
     

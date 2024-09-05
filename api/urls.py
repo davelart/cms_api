@@ -8,6 +8,7 @@ from django.views.generic import RedirectView
 
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
+from accounts.views import AccountsViewSet, ChurchsViewSet
 from administration.views import ChoicesViewSet, ChurchGroupsViewSet
 from attendance.views import AttendanceProgramsViewSet, AttendancesViewSet
 from finance.views import AccountExpenditureViewSet, AccountPaymentViewSet, AccountSetupViewSet
@@ -22,6 +23,10 @@ from techpanel.views import AdvancedUsersViewSet, SalesUserAccountsViewSet, Sale
 
 # v1 Routers
 router_v1 = routers.DefaultRouter(trailing_slash=False)
+
+# Accounts
+router_v1.register(r'churchs', ChurchsViewSet)
+router_v1.register(r'accounts', AccountsViewSet)
 
 # Administration
 router_v1.register(r'administration', ChurchGroupsViewSet, basename='churchgroups')
@@ -75,9 +80,9 @@ router_v1.register(r'techchats', TechChatsViewSet, basename='techchats')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('v1/', include([
         path('', include(router_v1.urls)),
+        path('', include('accounts.urls'), name='accounts')
     ])),
     path('', RedirectView.as_view(pattern_name='docs')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

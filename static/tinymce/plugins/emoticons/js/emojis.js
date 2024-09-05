@@ -1999,7 +1999,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "people"
   },
   mortar_board: {
-    keywords: [ "school", "college", "degree", "university", "graduation", "cap", "hat", "legal", "learn", "education" ],
+    keywords: [ "church", "college", "degree", "university", "graduation", "cap", "hat", "legal", "learn", "education" ],
     char: "\ud83c\udf93",
     fitzpatrick_scale: false,
     category: "people"
@@ -2010,7 +2010,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "people"
   },
-  school_satchel: {
+  church_satchel: {
     keywords: [ "student", "education", "bag", "backpack" ],
     char: "\ud83c\udf92",
     fitzpatrick_scale: false,
@@ -3145,7 +3145,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "food_and_drink"
   },
   apple: {
-    keywords: [ "fruit", "mac", "school" ],
+    keywords: [ "fruit", "mac", "church" ],
     char: "\ud83c\udf4e",
     fitzpatrick_scale: false,
     category: "food_and_drink"
@@ -4998,7 +4998,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "travel_and_places"
   },
-  school: {
+  church: {
     keywords: [ "building", "student", "education", "learn", "teach" ],
     char: "\ud83c\udfeb",
     fitzpatrick_scale: false,
@@ -5125,7 +5125,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   floppy_disk: {
-    keywords: [ "oldschool", "technology", "save", "90s", "80s" ],
+    keywords: [ "oldchurch", "technology", "save", "90s", "80s" ],
     char: "\ud83d\udcbe",
     fitzpatrick_scale: false,
     category: "objects"
@@ -5143,7 +5143,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   vhs: {
-    keywords: [ "record", "video", "oldschool", "90s", "80s" ],
+    keywords: [ "record", "video", "oldchurch", "90s", "80s" ],
     char: "\ud83d\udcfc",
     fitzpatrick_scale: false,
     category: "objects"
@@ -5197,7 +5197,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   pager: {
-    keywords: [ "bbcall", "oldschool", "90s" ],
+    keywords: [ "bbcall", "oldchurch", "90s" ],
     char: "\ud83d\udcdf",
     fitzpatrick_scale: false,
     category: "objects"
@@ -5209,7 +5209,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   tv: {
-    keywords: [ "technology", "program", "oldschool", "show", "television" ],
+    keywords: [ "technology", "program", "oldchurch", "show", "television" ],
     char: "\ud83d\udcfa",
     fitzpatrick_scale: false,
     category: "objects"
@@ -5269,13 +5269,13 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   hourglass_flowing_sand: {
-    keywords: [ "oldschool", "time", "countdown" ],
+    keywords: [ "oldchurch", "time", "countdown" ],
     char: "\u23f3",
     fitzpatrick_scale: false,
     category: "objects"
   },
   hourglass: {
-    keywords: [ "time", "clock", "oldschool", "limit", "exam", "quiz", "test" ],
+    keywords: [ "time", "clock", "oldchurch", "limit", "exam", "quiz", "test" ],
     char: "\u231b",
     fitzpatrick_scale: false,
     category: "objects"
@@ -6139,7 +6139,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   straight_ruler: {
-    keywords: [ "stationery", "calculate", "length", "math", "school", "drawing", "architect", "sketch" ],
+    keywords: [ "stationery", "calculate", "length", "math", "church", "drawing", "architect", "sketch" ],
     char: "\ud83d\udccf",
     fitzpatrick_scale: false,
     category: "objects"
@@ -6235,7 +6235,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   pencil2: {
-    keywords: [ "stationery", "write", "paper", "writing", "school", "study" ],
+    keywords: [ "stationery", "write", "paper", "writing", "church", "study" ],
     char: "\u270f\ufe0f",
     fitzpatrick_scale: false,
     category: "objects"
@@ -6847,7 +6847,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "symbols"
   },
   children_crossing: {
-    keywords: [ "school", "warning", "danger", "sign", "driving", "yellow-diamond" ],
+    keywords: [ "church", "warning", "danger", "sign", "driving", "yellow-diamond" ],
     char: "\ud83d\udeb8",
     fitzpatrick_scale: false,
     category: "symbols"

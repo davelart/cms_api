@@ -7,12 +7,12 @@ from drf_spectacular.utils import extend_schema, extend_schema_view
 
 
 @extend_schema_view(
-    list=extend_schema(tags=['AttendanceProgram'], summary='List all AttendanceProgram'),
-    create=extend_schema(tags=['AttendanceProgram'], summary='Create a AttendanceProgram'),
-    retrieve=extend_schema(tags=['AttendanceProgram'], summary='Get a AttendanceProgram', examples=[]),
-    update=extend_schema(tags=['AttendanceProgram'], summary='Update a AttendanceProgram', examples=[]),
-    partial_update=extend_schema(tags=['AttendanceProgram'], summary='Patch a AttendanceProgram', examples=[]),
-    destroy=extend_schema(tags=['AttendanceProgram'], summary='Delete a AttendanceProgram', examples=[]),
+    list=extend_schema(tags=['Attendance Program'], summary='List all Attendance Program'),
+    create=extend_schema(tags=['Attendance Program'], summary='Create a Attendance Program'),
+    retrieve=extend_schema(tags=['Attendance Program'], summary='Get a Attendance Program', examples=[]),
+    update=extend_schema(tags=['Attendance Program'], summary='Update a Attendance Program', examples=[]),
+    partial_update=extend_schema(tags=['Attendance Program'], summary='Patch a Attendance Program', examples=[]),
+    destroy=extend_schema(tags=['Attendance Program'], summary='Delete a Attendance Program', examples=[]),
 )
 class AttendanceProgramsViewSet(ModelViewSet):
     
@@ -24,7 +24,7 @@ class AttendanceProgramsViewSet(ModelViewSet):
         return AttendanceProgram.objects.all()
     
 @extend_schema_view(
-    list=extend_schema(tags=['Attendance'], summary='List all Attendance'),
+    list=extend_schema(tags=['Attendance'], summary='List all Attendances'),
     create=extend_schema(tags=['Attendance'], summary='Create a Attendance'),
     retrieve=extend_schema(tags=['Attendance'], summary='Get a Attendance', examples=[]),
     update=extend_schema(tags=['Attendance'], summary='Update a Attendance', examples=[]),
@@ -32,7 +32,7 @@ class AttendanceProgramsViewSet(ModelViewSet):
     destroy=extend_schema(tags=['Attendance'], summary='Delete a Attendance', examples=[]),
 )
 class AttendancesViewSet(ModelViewSet):
-    
+
     serializer_class = AttendanceSerializer
     ordering_fields = ['datecreated']
     http_method_names = ["get", "post", "put", "patch", "delete"]

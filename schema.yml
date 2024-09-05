@@ -1,0 +1,7073 @@
+openapi: 3.0.3
+info:
+  title: null
+  version: ''
+  description: churchaffairs_doc_description
+paths:
+  /v1/accountexpenditure:
+    get:
+      operationId: v1_accountexpenditure_list
+      summary: List all Account Expenditures
+      tags:
+      - Account Expenditure
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AccountExpenditure'
+          description: ''
+    post:
+      operationId: v1_accountexpenditure_create
+      summary: Create a Account Expenditure
+      tags:
+      - Account Expenditure
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountExpenditure'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AccountExpenditure'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AccountExpenditure'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountExpenditure'
+          description: ''
+  /v1/accountexpenditure/{id}:
+    get:
+      operationId: v1_accountexpenditure_retrieve
+      summary: Get a Account Expenditure
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account expenditure.
+        required: true
+      tags:
+      - Account Expenditure
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountExpenditure'
+          description: ''
+    put:
+      operationId: v1_accountexpenditure_update
+      summary: Update a Account Expenditure
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account expenditure.
+        required: true
+      tags:
+      - Account Expenditure
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountExpenditure'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AccountExpenditure'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AccountExpenditure'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountExpenditure'
+          description: ''
+    patch:
+      operationId: v1_accountexpenditure_partial_update
+      summary: Patch a Account Expenditure
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account expenditure.
+        required: true
+      tags:
+      - Account Expenditure
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountExpenditure'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountExpenditure'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountExpenditure'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountExpenditure'
+          description: ''
+    delete:
+      operationId: v1_accountexpenditure_destroy
+      summary: Delete a Account Expenditure
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account expenditure.
+        required: true
+      tags:
+      - Account Expenditure
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/accountpayment:
+    get:
+      operationId: v1_accountpayment_list
+      summary: List all Account Payments
+      tags:
+      - Account Payment
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AccountPayment'
+          description: ''
+    post:
+      operationId: v1_accountpayment_create
+      summary: Create a Account Payment
+      tags:
+      - Account Payment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountPayment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AccountPayment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AccountPayment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountPayment'
+          description: ''
+  /v1/accountpayment/{id}:
+    get:
+      operationId: v1_accountpayment_retrieve
+      summary: Get a Account Payment
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account payment.
+        required: true
+      tags:
+      - Account Payment
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountPayment'
+          description: ''
+    put:
+      operationId: v1_accountpayment_update
+      summary: Update a Account Payment
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account payment.
+        required: true
+      tags:
+      - Account Payment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountPayment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AccountPayment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AccountPayment'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountPayment'
+          description: ''
+    patch:
+      operationId: v1_accountpayment_partial_update
+      summary: Patch a Account Payment
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account payment.
+        required: true
+      tags:
+      - Account Payment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountPayment'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountPayment'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountPayment'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountPayment'
+          description: ''
+    delete:
+      operationId: v1_accountpayment_destroy
+      summary: Delete a Account Payment
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account payment.
+        required: true
+      tags:
+      - Account Payment
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/accounts:
+    get:
+      operationId: v1_accounts_list
+      summary: List all Accounts
+      parameters:
+      - in: query
+        name: church
+        schema:
+          type: string
+          format: uuid
+      tags:
+      - Accounts
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Account'
+          description: ''
+    post:
+      operationId: v1_accounts_create
+      summary: Create a Account
+      tags:
+      - Accounts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Account'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Account'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Account'
+        required: true
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+          description: ''
+  /v1/accounts/{identifier}:
+    get:
+      operationId: v1_accounts_retrieve
+      summary: Get a Account
+      parameters:
+      - in: path
+        name: identifier
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this account.
+        required: true
+      tags:
+      - Accounts
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+          description: ''
+    put:
+      operationId: v1_accounts_update
+      summary: Update a Account
+      parameters:
+      - in: path
+        name: identifier
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this account.
+        required: true
+      tags:
+      - Accounts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Account'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Account'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Account'
+        required: true
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+          description: ''
+    patch:
+      operationId: v1_accounts_partial_update
+      summary: Patch a Account
+      parameters:
+      - in: path
+        name: identifier
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this account.
+        required: true
+      tags:
+      - Accounts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAccount'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedAccount'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAccount'
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+          description: ''
+  /v1/accountsetup:
+    get:
+      operationId: v1_accountsetup_list
+      summary: List all Account Setups
+      tags:
+      - Account Setup
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AccountSetup'
+          description: ''
+    post:
+      operationId: v1_accountsetup_create
+      summary: Create a Account Setup
+      tags:
+      - Account Setup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountSetup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AccountSetup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AccountSetup'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountSetup'
+          description: ''
+  /v1/accountsetup/{id}:
+    get:
+      operationId: v1_accountsetup_retrieve
+      summary: Get a Account Setup
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account setup.
+        required: true
+      tags:
+      - Account Setup
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountSetup'
+          description: ''
+    put:
+      operationId: v1_accountsetup_update
+      summary: Update a Account Setup
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account setup.
+        required: true
+      tags:
+      - Account Setup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountSetup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AccountSetup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AccountSetup'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountSetup'
+          description: ''
+    patch:
+      operationId: v1_accountsetup_partial_update
+      summary: Patch a Account Setup
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account setup.
+        required: true
+      tags:
+      - Account Setup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountSetup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountSetup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAccountSetup'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountSetup'
+          description: ''
+    delete:
+      operationId: v1_accountsetup_destroy
+      summary: Delete a Account Setup
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this account setup.
+        required: true
+      tags:
+      - Account Setup
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/administration:
+    get:
+      operationId: v1_administration_list
+      summary: List all Church Groups
+      tags:
+      - Church Group
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ChurchGroup'
+          description: ''
+    post:
+      operationId: v1_administration_create
+      summary: Create a Church Group
+      tags:
+      - Church Group
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChurchGroup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ChurchGroup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChurchGroup'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChurchGroup'
+          description: ''
+  /v1/administration/{id}:
+    get:
+      operationId: v1_administration_retrieve
+      summary: Get a Church Group
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this church group.
+        required: true
+      tags:
+      - Church Group
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChurchGroup'
+          description: ''
+    put:
+      operationId: v1_administration_update
+      summary: Update a Church Group
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this church group.
+        required: true
+      tags:
+      - Church Group
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChurchGroup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ChurchGroup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChurchGroup'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChurchGroup'
+          description: ''
+    patch:
+      operationId: v1_administration_partial_update
+      summary: Patch a Church Group
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this church group.
+        required: true
+      tags:
+      - Church Group
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedChurchGroup'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedChurchGroup'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedChurchGroup'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChurchGroup'
+          description: ''
+    delete:
+      operationId: v1_administration_destroy
+      summary: Delete a Church Group
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this church group.
+        required: true
+      tags:
+      - Church Group
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/advancedusers:
+    get:
+      operationId: v1_advancedusers_list
+      summary: List all Advanced Users
+      tags:
+      - Advanced User
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdvancedUser'
+          description: ''
+    post:
+      operationId: v1_advancedusers_create
+      summary: Create a Advanced User
+      tags:
+      - Advanced User
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdvancedUser'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AdvancedUser'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AdvancedUser'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdvancedUser'
+          description: ''
+  /v1/advancedusers/{id}:
+    get:
+      operationId: v1_advancedusers_retrieve
+      summary: Get a Advanced User
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this advanced user.
+        required: true
+      tags:
+      - Advanced User
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdvancedUser'
+          description: ''
+    put:
+      operationId: v1_advancedusers_update
+      summary: Update a Advanced User
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this advanced user.
+        required: true
+      tags:
+      - Advanced User
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdvancedUser'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AdvancedUser'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AdvancedUser'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdvancedUser'
+          description: ''
+    patch:
+      operationId: v1_advancedusers_partial_update
+      summary: Patch a Advanced User
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this advanced user.
+        required: true
+      tags:
+      - Advanced User
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAdvancedUser'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedAdvancedUser'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAdvancedUser'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdvancedUser'
+          description: ''
+    delete:
+      operationId: v1_advancedusers_destroy
+      summary: Delete a Advanced User
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this advanced user.
+        required: true
+      tags:
+      - Advanced User
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/attendance:
+    get:
+      operationId: v1_attendance_list
+      summary: List all Attendance Program
+      tags:
+      - Attendance Program
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AttendanceProgram'
+          description: ''
+    post:
+      operationId: v1_attendance_create
+      summary: Create a Attendance Program
+      tags:
+      - Attendance Program
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AttendanceProgram'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AttendanceProgram'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AttendanceProgram'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttendanceProgram'
+          description: ''
+  /v1/attendance/{id}:
+    get:
+      operationId: v1_attendance_retrieve
+      summary: Get a Attendance Program
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this attendance program.
+        required: true
+      tags:
+      - Attendance Program
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttendanceProgram'
+          description: ''
+    put:
+      operationId: v1_attendance_update
+      summary: Update a Attendance Program
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this attendance program.
+        required: true
+      tags:
+      - Attendance Program
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AttendanceProgram'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AttendanceProgram'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AttendanceProgram'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttendanceProgram'
+          description: ''
+    patch:
+      operationId: v1_attendance_partial_update
+      summary: Patch a Attendance Program
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this attendance program.
+        required: true
+      tags:
+      - Attendance Program
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAttendanceProgram'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedAttendanceProgram'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedAttendanceProgram'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttendanceProgram'
+          description: ''
+    delete:
+      operationId: v1_attendance_destroy
+      summary: Delete a Attendance Program
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this attendance program.
+        required: true
+      tags:
+      - Attendance Program
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/branches:
+    get:
+      operationId: v1_branches_list
+      summary: List all Branches
+      tags:
+      - Branch
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Branches'
+          description: ''
+    post:
+      operationId: v1_branches_create
+      summary: Create a Branch
+      tags:
+      - Branch
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Branches'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Branches'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Branches'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branches'
+          description: ''
+  /v1/branches/{id}:
+    get:
+      operationId: v1_branches_retrieve
+      summary: Get a Branch
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this branches.
+        required: true
+      tags:
+      - Branch
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branches'
+          description: ''
+    put:
+      operationId: v1_branches_update
+      summary: Update a Branch
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this branches.
+        required: true
+      tags:
+      - Branch
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Branches'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Branches'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Branches'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branches'
+          description: ''
+    patch:
+      operationId: v1_branches_partial_update
+      summary: Patch a Branch
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this branches.
+        required: true
+      tags:
+      - Branch
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedBranches'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedBranches'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedBranches'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branches'
+          description: ''
+    delete:
+      operationId: v1_branches_destroy
+      summary: Delete a Branch
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this branches.
+        required: true
+      tags:
+      - Branch
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/branchreports:
+    get:
+      operationId: v1_branchreports_list
+      summary: List all Branch Reports
+      tags:
+      - Branch Report
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BranchReport'
+          description: ''
+    post:
+      operationId: v1_branchreports_create
+      summary: Create a Branch Report
+      tags:
+      - Branch Report
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BranchReport'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/BranchReport'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/BranchReport'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BranchReport'
+          description: ''
+  /v1/branchreports/{id}:
+    get:
+      operationId: v1_branchreports_retrieve
+      summary: Get a Branch Report
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this branch report.
+        required: true
+      tags:
+      - Branch Report
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BranchReport'
+          description: ''
+    put:
+      operationId: v1_branchreports_update
+      summary: Update a Branch Report
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this branch report.
+        required: true
+      tags:
+      - Branch Report
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BranchReport'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/BranchReport'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/BranchReport'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BranchReport'
+          description: ''
+    patch:
+      operationId: v1_branchreports_partial_update
+      summary: Patch a Branch Report
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this branch report.
+        required: true
+      tags:
+      - Branch Report
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedBranchReport'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedBranchReport'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedBranchReport'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BranchReport'
+          description: ''
+    delete:
+      operationId: v1_branchreports_destroy
+      summary: Delete a Branch Report
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this branch report.
+        required: true
+      tags:
+      - Branch Report
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/churchprofile:
+    get:
+      operationId: v1_churchprofile_list
+      summary: List all Profiles
+      tags:
+      - Profile
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Profile'
+          description: ''
+    post:
+      operationId: v1_churchprofile_create
+      summary: Create a Profile
+      tags:
+      - Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profile'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+  /v1/churchprofile/{id}:
+    get:
+      operationId: v1_churchprofile_retrieve
+      summary: Get a Profile
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this church profile.
+        required: true
+      tags:
+      - Profile
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+    put:
+      operationId: v1_churchprofile_update
+      summary: Update a Profile
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this church profile.
+        required: true
+      tags:
+      - Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profile'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+    patch:
+      operationId: v1_churchprofile_partial_update
+      summary: Patch a Profile
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this church profile.
+        required: true
+      tags:
+      - Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProfile'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+    delete:
+      operationId: v1_churchprofile_destroy
+      summary: Delete a Profile
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this church profile.
+        required: true
+      tags:
+      - Profile
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/churchs:
+    get:
+      operationId: v1_churchs_list
+      summary: List all Churchs
+      tags:
+      - Churchs
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Church'
+          description: ''
+    post:
+      operationId: v1_churchs_create
+      summary: Create a Church
+      tags:
+      - Churchs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Church'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Church'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Church'
+        required: true
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Church'
+          description: ''
+  /v1/churchs/{identifier}:
+    get:
+      operationId: v1_churchs_retrieve
+      summary: Get a Church
+      parameters:
+      - in: path
+        name: identifier
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this church.
+        required: true
+      tags:
+      - Churchs
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Church'
+          description: ''
+    put:
+      operationId: v1_churchs_update
+      summary: Update a Church
+      parameters:
+      - in: path
+        name: identifier
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this church.
+        required: true
+      tags:
+      - Churchs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Church'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Church'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Church'
+        required: true
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Church'
+          description: ''
+    patch:
+      operationId: v1_churchs_partial_update
+      summary: Patch a Church
+      parameters:
+      - in: path
+        name: identifier
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this church.
+        required: true
+      tags:
+      - Churchs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedChurch'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedChurch'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedChurch'
+      security:
+      - basicAuth: []
+      - tokenAuth: []
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Church'
+          description: ''
+  /v1/emailsent:
+    get:
+      operationId: v1_emailsent_list
+      summary: List all Sent Emails
+      tags:
+      - Sent Email
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EmailSent'
+          description: ''
+    post:
+      operationId: v1_emailsent_create
+      summary: Create a Sent Email
+      tags:
+      - Sent Email
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EmailSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/EmailSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmailSent'
+          description: ''
+  /v1/emailsent/{id}:
+    get:
+      operationId: v1_emailsent_retrieve
+      summary: Get a Sent Email
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this email sent.
+        required: true
+      tags:
+      - Sent Email
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmailSent'
+          description: ''
+    put:
+      operationId: v1_emailsent_update
+      summary: Update a Sent Email
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this email sent.
+        required: true
+      tags:
+      - Sent Email
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EmailSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/EmailSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmailSent'
+          description: ''
+    patch:
+      operationId: v1_emailsent_partial_update
+      summary: Patch a Sent Email
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this email sent.
+        required: true
+      tags:
+      - Sent Email
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedEmailSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedEmailSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedEmailSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmailSent'
+          description: ''
+    delete:
+      operationId: v1_emailsent_destroy
+      summary: Delete a Sent Email
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this email sent.
+        required: true
+      tags:
+      - Sent Email
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/emailsubscriptions:
+    get:
+      operationId: v1_emailsubscriptions_list
+      summary: List all Email Subscriptions
+      tags:
+      - Email Subscription
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Testimonies'
+          description: ''
+    post:
+      operationId: v1_emailsubscriptions_create
+      summary: Create a Email Subscription
+      tags:
+      - Email Subscription
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testimonies'
+          description: ''
+  /v1/emailsubscriptions/{id}:
+    get:
+      operationId: v1_emailsubscriptions_retrieve
+      summary: Get a Email Subscription
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this email subscription.
+        required: true
+      tags:
+      - Email Subscription
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testimonies'
+          description: ''
+    put:
+      operationId: v1_emailsubscriptions_update
+      summary: Update a Email Subscription
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this email subscription.
+        required: true
+      tags:
+      - Email Subscription
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testimonies'
+          description: ''
+    patch:
+      operationId: v1_emailsubscriptions_partial_update
+      summary: Patch a Email Subscription
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this email subscription.
+        required: true
+      tags:
+      - Email Subscription
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedTestimonies'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedTestimonies'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedTestimonies'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testimonies'
+          description: ''
+    delete:
+      operationId: v1_emailsubscriptions_destroy
+      summary: Delete a Email Subscription
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this email subscription.
+        required: true
+      tags:
+      - Email Subscription
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/features:
+    get:
+      operationId: v1_features_list
+      summary: List all Features
+      tags:
+      - Feature
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Features'
+          description: ''
+    post:
+      operationId: v1_features_create
+      summary: Create a Feature
+      tags:
+      - Feature
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Features'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Features'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Features'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Features'
+          description: ''
+  /v1/features/{id}:
+    get:
+      operationId: v1_features_retrieve
+      summary: Get a Feature
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this features.
+        required: true
+      tags:
+      - Feature
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Features'
+          description: ''
+    put:
+      operationId: v1_features_update
+      summary: Update a Feature
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this features.
+        required: true
+      tags:
+      - Feature
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Features'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Features'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Features'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Features'
+          description: ''
+    patch:
+      operationId: v1_features_partial_update
+      summary: Patch a Feature
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this features.
+        required: true
+      tags:
+      - Feature
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedFeatures'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedFeatures'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedFeatures'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Features'
+          description: ''
+    delete:
+      operationId: v1_features_destroy
+      summary: Delete a Feature
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this features.
+        required: true
+      tags:
+      - Feature
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/guests:
+    get:
+      operationId: v1_guests_list
+      summary: List all Guests
+      tags:
+      - Guest
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Guest'
+          description: ''
+    post:
+      operationId: v1_guests_create
+      summary: Create a Guest
+      tags:
+      - Guest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Guest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Guest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Guest'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Guest'
+          description: ''
+  /v1/guests/{id}:
+    get:
+      operationId: v1_guests_retrieve
+      summary: Get a Guest
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this guests.
+        required: true
+      tags:
+      - Guest
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Guest'
+          description: ''
+    put:
+      operationId: v1_guests_update
+      summary: Update a Guest
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this guests.
+        required: true
+      tags:
+      - Guest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Guest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Guest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Guest'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Guest'
+          description: ''
+    patch:
+      operationId: v1_guests_partial_update
+      summary: Patch a Guest
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this guests.
+        required: true
+      tags:
+      - Guest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGuest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGuest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGuest'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Guest'
+          description: ''
+    delete:
+      operationId: v1_guests_destroy
+      summary: Delete a Guest
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this guests.
+        required: true
+      tags:
+      - Guest
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/members:
+    get:
+      operationId: v1_members_list
+      summary: List all Members
+      tags:
+      - Member
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Member'
+          description: ''
+    post:
+      operationId: v1_members_create
+      summary: Create a Member
+      tags:
+      - Member
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Member'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Member'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Member'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Member'
+          description: ''
+  /v1/members/{id}:
+    get:
+      operationId: v1_members_retrieve
+      summary: Get a Member
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this member.
+        required: true
+      tags:
+      - Member
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Member'
+          description: ''
+    put:
+      operationId: v1_members_update
+      summary: Update a Member
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this member.
+        required: true
+      tags:
+      - Member
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Member'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Member'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Member'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Member'
+          description: ''
+    patch:
+      operationId: v1_members_partial_update
+      summary: Patch a Member
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this member.
+        required: true
+      tags:
+      - Member
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedMember'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedMember'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedMember'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Member'
+          description: ''
+    delete:
+      operationId: v1_members_destroy
+      summary: Delete a Member
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this member.
+        required: true
+      tags:
+      - Member
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/notifiersettings:
+    get:
+      operationId: v1_notifiersettings_list
+      summary: List all Notifier Settings
+      tags:
+      - Notifier Setting
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NotifierSettings'
+          description: ''
+    post:
+      operationId: v1_notifiersettings_create
+      summary: Create a Notifier Setting
+      tags:
+      - Notifier Setting
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotifierSettings'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/NotifierSettings'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/NotifierSettings'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotifierSettings'
+          description: ''
+  /v1/notifiersettings/{id}:
+    get:
+      operationId: v1_notifiersettings_retrieve
+      summary: Get a Notifier Setting
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this notifier settings.
+        required: true
+      tags:
+      - Notifier Setting
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotifierSettings'
+          description: ''
+    put:
+      operationId: v1_notifiersettings_update
+      summary: Update a Notifier Setting
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this notifier settings.
+        required: true
+      tags:
+      - Notifier Setting
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotifierSettings'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/NotifierSettings'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/NotifierSettings'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotifierSettings'
+          description: ''
+    patch:
+      operationId: v1_notifiersettings_partial_update
+      summary: Patch a Notifier Setting
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this notifier settings.
+        required: true
+      tags:
+      - Notifier Setting
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedNotifierSettings'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedNotifierSettings'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedNotifierSettings'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotifierSettings'
+          description: ''
+    delete:
+      operationId: v1_notifiersettings_destroy
+      summary: Delete a Notifier Setting
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this notifier settings.
+        required: true
+      tags:
+      - Notifier Setting
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/pushsent:
+    get:
+      operationId: v1_pushsent_list
+      summary: List all Sent Pushs
+      tags:
+      - Sent Push
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PushSent'
+          description: ''
+    post:
+      operationId: v1_pushsent_create
+      summary: Create a Sent Push
+      tags:
+      - Sent Push
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PushSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PushSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PushSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PushSent'
+          description: ''
+  /v1/pushsent/{id}:
+    get:
+      operationId: v1_pushsent_retrieve
+      summary: Get a Sent Push
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this push sent.
+        required: true
+      tags:
+      - Sent Push
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PushSent'
+          description: ''
+    put:
+      operationId: v1_pushsent_update
+      summary: Update a Sent Push
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this push sent.
+        required: true
+      tags:
+      - Sent Push
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PushSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PushSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PushSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PushSent'
+          description: ''
+    patch:
+      operationId: v1_pushsent_partial_update
+      summary: Patch a Sent Push
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this push sent.
+        required: true
+      tags:
+      - Sent Push
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedPushSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedPushSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedPushSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PushSent'
+          description: ''
+    delete:
+      operationId: v1_pushsent_destroy
+      summary: Delete a Sent Push
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this push sent.
+        required: true
+      tags:
+      - Sent Push
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/register:
+    get:
+      operationId: v1_register_list
+      summary: List all Registers
+      tags:
+      - Register
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Register'
+          description: ''
+    post:
+      operationId: v1_register_create
+      summary: Create a Register
+      tags:
+      - Register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Register'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Register'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Register'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Register'
+          description: ''
+  /v1/register/{id}:
+    get:
+      operationId: v1_register_retrieve
+      summary: Get a Register
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this register.
+        required: true
+      tags:
+      - Register
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Register'
+          description: ''
+    put:
+      operationId: v1_register_update
+      summary: Update a Register
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this register.
+        required: true
+      tags:
+      - Register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Register'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Register'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Register'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Register'
+          description: ''
+    patch:
+      operationId: v1_register_partial_update
+      summary: Patch a Register
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this register.
+        required: true
+      tags:
+      - Register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedRegister'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedRegister'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedRegister'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Register'
+          description: ''
+    delete:
+      operationId: v1_register_destroy
+      summary: Delete a Register
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this register.
+        required: true
+      tags:
+      - Register
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/sales:
+    get:
+      operationId: v1_sales_list
+      summary: List all Sales
+      tags:
+      - Sales
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sales'
+          description: ''
+    post:
+      operationId: v1_sales_create
+      summary: Create a Sales
+      tags:
+      - Sales
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sales'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Sales'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Sales'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+  /v1/sales/{id}:
+    get:
+      operationId: v1_sales_retrieve
+      summary: Get a Sales
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sales.
+        required: true
+      tags:
+      - Sales
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+    put:
+      operationId: v1_sales_update
+      summary: Update a Sales
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sales.
+        required: true
+      tags:
+      - Sales
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sales'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Sales'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Sales'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+    patch:
+      operationId: v1_sales_partial_update
+      summary: Patch a Sales
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sales.
+        required: true
+      tags:
+      - Sales
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedSales'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedSales'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedSales'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+    delete:
+      operationId: v1_sales_destroy
+      summary: Delete a Sales
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sales.
+        required: true
+      tags:
+      - Sales
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/salesuseraccounts:
+    get:
+      operationId: v1_salesuseraccounts_list
+      summary: List all Sales User Accounts
+      tags:
+      - Sales User Account
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SalesUserAccount'
+          description: ''
+    post:
+      operationId: v1_salesuseraccounts_create
+      summary: Create a Sales User Account
+      tags:
+      - Sales User Account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SalesUserAccount'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SalesUserAccount'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SalesUserAccount'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesUserAccount'
+          description: ''
+  /v1/salesuseraccounts/{id}:
+    get:
+      operationId: v1_salesuseraccounts_retrieve
+      summary: Get a Sales User Account
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sales user account.
+        required: true
+      tags:
+      - Sales User Account
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesUserAccount'
+          description: ''
+    put:
+      operationId: v1_salesuseraccounts_update
+      summary: Update a Sales User Account
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sales user account.
+        required: true
+      tags:
+      - Sales User Account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SalesUserAccount'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SalesUserAccount'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SalesUserAccount'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesUserAccount'
+          description: ''
+    patch:
+      operationId: v1_salesuseraccounts_partial_update
+      summary: Patch a Sales User Account
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sales user account.
+        required: true
+      tags:
+      - Sales User Account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedSalesUserAccount'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedSalesUserAccount'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedSalesUserAccount'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesUserAccount'
+          description: ''
+    delete:
+      operationId: v1_salesuseraccounts_destroy
+      summary: Delete a Sales User Account
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sales user account.
+        required: true
+      tags:
+      - Sales User Account
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/smssent:
+    get:
+      operationId: v1_smssent_list
+      summary: List all Sent Sms
+      tags:
+      - Sent Sms
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SmsSent'
+          description: ''
+    post:
+      operationId: v1_smssent_create
+      summary: Create a Sent Sms
+      tags:
+      - Sent Sms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SmsSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SmsSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SmsSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SmsSent'
+          description: ''
+  /v1/smssent/{id}:
+    get:
+      operationId: v1_smssent_retrieve
+      summary: Get a Sent Sms
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sms sent.
+        required: true
+      tags:
+      - Sent Sms
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SmsSent'
+          description: ''
+    put:
+      operationId: v1_smssent_update
+      summary: Update a Sent Sms
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sms sent.
+        required: true
+      tags:
+      - Sent Sms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SmsSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SmsSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SmsSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SmsSent'
+          description: ''
+    patch:
+      operationId: v1_smssent_partial_update
+      summary: Patch a Sent Sms
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sms sent.
+        required: true
+      tags:
+      - Sent Sms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedSmsSent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedSmsSent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedSmsSent'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SmsSent'
+          description: ''
+    delete:
+      operationId: v1_smssent_destroy
+      summary: Delete a Sent Sms
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this sms sent.
+        required: true
+      tags:
+      - Sent Sms
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/techchats:
+    get:
+      operationId: v1_techchats_list
+      summary: List all Tech Chats
+      tags:
+      - Tech Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TechChat'
+          description: ''
+    post:
+      operationId: v1_techchats_create
+      summary: Create a Tech Chat
+      tags:
+      - Tech Chat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TechChat'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TechChat'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TechChat'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TechChat'
+          description: ''
+  /v1/techchats/{id}:
+    get:
+      operationId: v1_techchats_retrieve
+      summary: Get a Tech Chat
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this tech chat.
+        required: true
+      tags:
+      - Tech Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TechChat'
+          description: ''
+    put:
+      operationId: v1_techchats_update
+      summary: Update a Tech Chat
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this tech chat.
+        required: true
+      tags:
+      - Tech Chat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TechChat'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TechChat'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TechChat'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TechChat'
+          description: ''
+    patch:
+      operationId: v1_techchats_partial_update
+      summary: Patch a Tech Chat
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this tech chat.
+        required: true
+      tags:
+      - Tech Chat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedTechChat'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedTechChat'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedTechChat'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TechChat'
+          description: ''
+    delete:
+      operationId: v1_techchats_destroy
+      summary: Delete a Tech Chat
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this tech chat.
+        required: true
+      tags:
+      - Tech Chat
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/techchattickets:
+    get:
+      operationId: v1_techchattickets_list
+      summary: List all Tech Chat Tickets
+      tags:
+      - Tech Chat Ticket
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TechChatTicket'
+          description: ''
+    post:
+      operationId: v1_techchattickets_create
+      summary: Create a Tech Chat Ticket
+      tags:
+      - Tech Chat Ticket
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TechChatTicket'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TechChatTicket'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TechChatTicket'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TechChatTicket'
+          description: ''
+  /v1/techchattickets/{id}:
+    get:
+      operationId: v1_techchattickets_retrieve
+      summary: Get a Tech Chat Ticket
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this tech chat ticket.
+        required: true
+      tags:
+      - Tech Chat Ticket
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TechChatTicket'
+          description: ''
+    put:
+      operationId: v1_techchattickets_update
+      summary: Update a Tech Chat Ticket
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this tech chat ticket.
+        required: true
+      tags:
+      - Tech Chat Ticket
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TechChatTicket'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TechChatTicket'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TechChatTicket'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TechChatTicket'
+          description: ''
+    patch:
+      operationId: v1_techchattickets_partial_update
+      summary: Patch a Tech Chat Ticket
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this tech chat ticket.
+        required: true
+      tags:
+      - Tech Chat Ticket
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedTechChatTicket'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedTechChatTicket'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedTechChatTicket'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TechChatTicket'
+          description: ''
+    delete:
+      operationId: v1_techchattickets_destroy
+      summary: Delete a Tech Chat Ticket
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this tech chat ticket.
+        required: true
+      tags:
+      - Tech Chat Ticket
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/telephony:
+    get:
+      operationId: v1_telephony_list
+      summary: List all Telephonies
+      tags:
+      - Telephony
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Telephony'
+          description: ''
+    post:
+      operationId: v1_telephony_create
+      summary: Create a Telephony
+      tags:
+      - Telephony
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Telephony'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Telephony'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Telephony'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Telephony'
+          description: ''
+  /v1/telephony/{id}:
+    get:
+      operationId: v1_telephony_retrieve
+      summary: Get a Telephony
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this telephony.
+        required: true
+      tags:
+      - Telephony
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Telephony'
+          description: ''
+    put:
+      operationId: v1_telephony_update
+      summary: Update a Telephony
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this telephony.
+        required: true
+      tags:
+      - Telephony
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Telephony'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Telephony'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Telephony'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Telephony'
+          description: ''
+    patch:
+      operationId: v1_telephony_partial_update
+      summary: Patch a Telephony
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this telephony.
+        required: true
+      tags:
+      - Telephony
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedTelephony'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedTelephony'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedTelephony'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Telephony'
+          description: ''
+    delete:
+      operationId: v1_telephony_destroy
+      summary: Delete a Telephony
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this telephony.
+        required: true
+      tags:
+      - Telephony
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /v1/testimonies:
+    get:
+      operationId: v1_testimonies_list
+      summary: List all Testimonies
+      tags:
+      - Testimony
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Testimonies'
+          description: ''
+    post:
+      operationId: v1_testimonies_create
+      summary: Create a Testimony
+      tags:
+      - Testimony
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testimonies'
+          description: ''
+  /v1/testimonies/{id}:
+    get:
+      operationId: v1_testimonies_retrieve
+      summary: Get a Testimony
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this testimonies.
+        required: true
+      tags:
+      - Testimony
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testimonies'
+          description: ''
+    put:
+      operationId: v1_testimonies_update
+      summary: Update a Testimony
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this testimonies.
+        required: true
+      tags:
+      - Testimony
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Testimonies'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testimonies'
+          description: ''
+    patch:
+      operationId: v1_testimonies_partial_update
+      summary: Patch a Testimony
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this testimonies.
+        required: true
+      tags:
+      - Testimony
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedTestimonies'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedTestimonies'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedTestimonies'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testimonies'
+          description: ''
+    delete:
+      operationId: v1_testimonies_destroy
+      summary: Delete a Testimony
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this testimonies.
+        required: true
+      tags:
+      - Testimony
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    Account:
+      type: object
+      properties:
+        identifier:
+          type: string
+          format: uuid
+          readOnly: true
+        first_name:
+          type: string
+          readOnly: true
+        middle_name:
+          type: string
+          readOnly: true
+        last_name:
+          type: string
+          readOnly: true
+        email:
+          type: string
+          readOnly: true
+        photo:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+        confirmed:
+          type: boolean
+        user:
+          type: integer
+        church:
+          type: string
+          format: uuid
+      required:
+      - church
+      - email
+      - first_name
+      - identifier
+      - last_name
+      - middle_name
+    AccountExpenditure:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        date:
+          type: string
+          format: date
+          nullable: true
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        quantity:
+          type: string
+          nullable: true
+          maxLength: 255
+        amount:
+          type: string
+          maxLength: 255
+        approvedby:
+          type: string
+          nullable: true
+          maxLength: 255
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+      - title
+    AccountPayment:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        memberid:
+          type: string
+          nullable: true
+          maxLength: 100
+        date:
+          type: string
+          format: date
+          nullable: true
+        payerfullname:
+          type: string
+          maxLength: 255
+        accountname:
+          type: string
+          maxLength: 255
+        accounttype:
+          type: string
+          nullable: true
+          maxLength: 100
+        currency:
+          type: string
+          nullable: true
+          maxLength: 255
+        amount:
+          type: string
+          maxLength: 255
+        payinby:
+          type: string
+          nullable: true
+          title: Payin By
+          maxLength: 255
+        paymentmethod:
+          type: string
+          maxLength: 255
+        cheq_chequenumber:
+          type: string
+          nullable: true
+          maxLength: 255
+        cheq_micrcode:
+          type: string
+          nullable: true
+          maxLength: 255
+        cheq_accountnumber:
+          type: string
+          nullable: true
+          maxLength: 255
+        wirtrans_accountnumber:
+          type: string
+          nullable: true
+          maxLength: 255
+        instantpledge:
+          type: boolean
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+      - payerfullname
+    AccountSetup:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        accountname:
+          type: string
+          nullable: true
+          maxLength: 255
+        accounttype:
+          type: string
+          nullable: true
+          maxLength: 255
+        purpose:
+          type: string
+          nullable: true
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    AdvancedUser:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        photograph:
+          type: string
+          format: uri
+          nullable: true
+        userid:
+          type: string
+          nullable: true
+          maxLength: 255
+        firstname:
+          type: string
+          nullable: true
+          maxLength: 255
+        middlename:
+          type: string
+          nullable: true
+          maxLength: 255
+        lastname:
+          type: string
+          nullable: true
+          maxLength: 255
+        gender:
+          type: string
+          nullable: true
+          maxLength: 255
+        dateofbirth:
+          type: string
+          format: date
+          nullable: true
+        telephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        email:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        country:
+          type: string
+          nullable: true
+          maxLength: 255
+        levelofeducation:
+          type: string
+          nullable: true
+          maxLength: 255
+        salesskills:
+          type: string
+          nullable: true
+          maxLength: 255
+        summary:
+          type: string
+          nullable: true
+          maxLength: 255
+        curriculumvitae:
+          type: string
+          format: uri
+          nullable: true
+        username:
+          type: string
+          nullable: true
+          maxLength: 255
+        password:
+          type: string
+          nullable: true
+          maxLength: 255
+        role:
+          type: string
+          nullable: true
+          maxLength: 255
+        module_profile:
+          type: boolean
+        module_sales:
+          type: boolean
+        module_documentation:
+          type: boolean
+        module_admin:
+          type: boolean
+        module_church:
+          type: boolean
+        module_chat:
+          type: boolean
+        module_system:
+          type: boolean
+        confirmed:
+          type: boolean
+        user:
+          type: integer
+      required:
+      - id
+      - user
+    AttendanceProgram:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        programid:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        date:
+          type: string
+          format: date
+          nullable: true
+        attendancetype:
+          type: string
+          nullable: true
+          maxLength: 255
+        male:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        female:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        children:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        total:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        status:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    BlankEnum:
+      enum:
+      - ''
+    BranchReport:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        fulltext:
+          type: string
+          nullable: true
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+      - title
+    Branches:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        subhead:
+          type: string
+          nullable: true
+          maxLength: 50
+        branchname:
+          type: string
+          nullable: true
+          maxLength: 255
+        subheadalias:
+          type: string
+          nullable: true
+          maxLength: 255
+        branchphotograph:
+          type: string
+          format: uri
+          nullable: true
+        slug:
+          type: string
+          nullable: true
+          maxLength: 255
+          pattern: ^[-a-zA-Z0-9_]+$
+        location:
+          type: string
+          nullable: true
+          maxLength: 255
+        country:
+          type: string
+          nullable: true
+          maxLength: 255
+        residentialaddress:
+          type: string
+          nullable: true
+        postaladdress:
+          type: string
+          nullable: true
+        telephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        fax:
+          type: string
+          nullable: true
+          maxLength: 255
+        email:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        website:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 255
+        headfullname:
+          type: string
+          nullable: true
+          maxLength: 255
+        headtelephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        heademail:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        headposition:
+          type: string
+          nullable: true
+          maxLength: 255
+        paymentplan:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/PaymentplanEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        chargeamount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,253}(?:\.\d{0,2})?$
+        nextchargedate:
+          type: string
+          format: date
+          nullable: true
+        keycode:
+          type: string
+          nullable: true
+          maxLength: 255
+        connectedtoserver:
+          type: boolean
+        module_dashboard:
+          type: boolean
+        module_members:
+          type: boolean
+        module_members_add:
+          type: boolean
+        module_members_update:
+          type: boolean
+        module_members_delete:
+          type: boolean
+        module_guests:
+          type: boolean
+        module_guests_add:
+          type: boolean
+        module_guests_update:
+          type: boolean
+        module_guests_delete:
+          type: boolean
+        module_attendance:
+          type: boolean
+        module_notifier:
+          type: boolean
+        module_notifier_sms:
+          type: boolean
+        module_notifier_emails:
+          type: boolean
+        module_notifier_mobileapp:
+          type: boolean
+        module_notifier_settings:
+          type: boolean
+        module_finance:
+          type: boolean
+        module_finance_individualincome:
+          type: boolean
+        module_finance_bulkincome:
+          type: boolean
+        module_finance_expenditure:
+          type: boolean
+        module_finance_accountsetup:
+          type: boolean
+        module_reports:
+          type: boolean
+        module_reports_branch:
+          type: boolean
+        module_reports_subbranch:
+          type: boolean
+        module_administration:
+          type: boolean
+        module_administration_branchprofile:
+          type: boolean
+        module_administration_branchusers:
+          type: boolean
+        module_administration_choices:
+          type: boolean
+        headquarters:
+          type: boolean
+        confirmed:
+          type: boolean
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+      required:
+      - id
+    Church:
+      type: object
+      properties:
+        identifier:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        logo:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+        motto:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone:
+          type: string
+          maxLength: 100
+        email:
+          type: string
+          maxLength: 100
+        owner_first_name:
+          type: string
+          maxLength: 100
+        owner_last_name:
+          type: string
+          maxLength: 100
+        owner_fullname:
+          type: string
+          nullable: true
+          maxLength: 100
+        owner_phone:
+          type: string
+          maxLength: 100
+        owner_email:
+          type: string
+          format: email
+          maxLength: 100
+        owner_username:
+          type: string
+          maxLength: 100
+        password:
+          type: string
+          nullable: true
+          maxLength: 100
+        confirm_password:
+          type: string
+          nullable: true
+          maxLength: 100
+        address:
+          type: string
+          nullable: true
+          maxLength: 1000
+        postal:
+          type: string
+          nullable: true
+          maxLength: 1000
+        bank_name:
+          type: string
+          nullable: true
+          maxLength: 100
+        bank_account_number:
+          type: string
+          nullable: true
+          maxLength: 100
+        active:
+          type: boolean
+        payment_plan:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/PaymentPlanEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        next_expiry_date:
+          type: string
+          format: date
+          nullable: true
+      required:
+      - email
+      - identifier
+      - name
+      - owner_email
+      - owner_first_name
+      - owner_last_name
+      - owner_phone
+      - owner_username
+      - phone
+    ChurchGroup:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        churchgroup:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    EmailSent:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        subject:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        accordingto:
+          type: string
+          nullable: true
+          maxLength: 255
+        fromaddr:
+          type: string
+          nullable: true
+          maxLength: 255
+        toaddr:
+          type: string
+          nullable: true
+          maxLength: 255
+        sentstatus:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    Features:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        slug:
+          type: string
+          nullable: true
+          maxLength: 100
+          pattern: ^[-a-zA-Z0-9_]+$
+        featureshortname:
+          type: string
+          nullable: true
+          maxLength: 100
+        featurelongname:
+          type: string
+          nullable: true
+          maxLength: 255
+        featureicon:
+          type: string
+          format: uri
+          nullable: true
+        featureshortdescription:
+          type: string
+          nullable: true
+        featurelongdescription:
+          type: string
+          nullable: true
+        ordernumber:
+          type: string
+          nullable: true
+          maxLength: 100
+        featurecolor:
+          type: string
+          nullable: true
+          maxLength: 100
+        activestatus:
+          type: boolean
+      required:
+      - id
+    GenderEnum:
+      enum:
+      - Male
+      - Female
+      - None
+      type: string
+      description: |-
+        * `Male` - Male
+        * `Female` - Female
+        * `None` - None
+    Guest:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        guestid:
+          type: string
+          nullable: true
+          maxLength: 100
+        photograph:
+          type: string
+          format: uri
+          nullable: true
+        title:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/TitleEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        firstname:
+          type: string
+          nullable: true
+          maxLength: 100
+        middlename:
+          type: string
+          nullable: true
+          maxLength: 100
+        lastname:
+          type: string
+          nullable: true
+          maxLength: 100
+        gender:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/GenderEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        dateofbirth:
+          type: string
+          format: date
+          nullable: true
+        placeofbirth:
+          type: string
+          nullable: true
+          maxLength: 100
+        occupation:
+          type: string
+          nullable: true
+          maxLength: 100
+        homeaddress:
+          type: string
+          nullable: true
+        postaladdress:
+          type: string
+          nullable: true
+        phonenumber1:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone1_rnotif:
+          type: boolean
+        phonenumber2:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone2_rnotif:
+          type: boolean
+        emailaddress1:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 100
+        email1_rnotif:
+          type: boolean
+        emailaddress2:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 100
+        email2_rnotif:
+          type: boolean
+        invitedby:
+          type: string
+          nullable: true
+          maxLength: 100
+        purposeofvisit:
+          type: string
+          nullable: true
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    Member:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        memberid:
+          type: string
+          nullable: true
+          maxLength: 100
+        deviceid:
+          type: string
+          nullable: true
+          maxLength: 100
+        photograph:
+          type: string
+          format: uri
+          nullable: true
+        title:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/TitleEnum'
+          - $ref: '#/components/schemas/BlankEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        firstname:
+          type: string
+          nullable: true
+          maxLength: 100
+        middlename:
+          type: string
+          nullable: true
+          maxLength: 100
+        lastname:
+          type: string
+          nullable: true
+          maxLength: 100
+        gender:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/GenderEnum'
+          - $ref: '#/components/schemas/BlankEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        dateofbirth:
+          type: string
+          format: date
+          nullable: true
+        placeofbirth:
+          type: string
+          nullable: true
+          maxLength: 100
+        occupation:
+          type: string
+          nullable: true
+          maxLength: 100
+        homeaddress:
+          type: string
+          nullable: true
+        postaladdress:
+          type: string
+          nullable: true
+        phonenumber1:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone1_rnotif:
+          type: boolean
+        phonenumber2:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone2_rnotif:
+          type: boolean
+        emailaddress1:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 100
+        email1_rnotif:
+          type: boolean
+        emailaddress2:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 100
+        email2_rnotif:
+          type: boolean
+        pushdeviceid:
+          type: string
+          nullable: true
+          maxLength: 100
+        pushdeviceid_rnotif:
+          type: boolean
+        datebornagain:
+          type: string
+          format: date
+          nullable: true
+        datebaptised:
+          type: string
+          format: date
+          nullable: true
+        churchgroups:
+          type: string
+          nullable: true
+          maxLength: 100
+        ministerialposition:
+          type: string
+          nullable: true
+          maxLength: 100
+        convert:
+          type: boolean
+        activestatus:
+          type: boolean
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    NotifierSettings:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        sms_sender:
+          type: string
+          maxLength: 11
+        sms_verification:
+          type: boolean
+        sms_verification_status:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone_countrycode:
+          type: string
+          nullable: true
+          maxLength: 255
+        email_from:
+          type: string
+          format: email
+          maxLength: 255
+        notifierpoints:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        rnotif_memberadd:
+          type: boolean
+        rnotif_guestadd:
+          type: boolean
+        rnotif_financeadd:
+          type: boolean
+        lastmodified:
+          type: string
+          format: date-time
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    NullEnum:
+      enum:
+      - null
+    PatchedAccount:
+      type: object
+      properties:
+        identifier:
+          type: string
+          format: uuid
+          readOnly: true
+        first_name:
+          type: string
+          readOnly: true
+        middle_name:
+          type: string
+          readOnly: true
+        last_name:
+          type: string
+          readOnly: true
+        email:
+          type: string
+          readOnly: true
+        photo:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+        confirmed:
+          type: boolean
+        user:
+          type: integer
+        church:
+          type: string
+          format: uuid
+    PatchedAccountExpenditure:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        date:
+          type: string
+          format: date
+          nullable: true
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          nullable: true
+        quantity:
+          type: string
+          nullable: true
+          maxLength: 255
+        amount:
+          type: string
+          maxLength: 255
+        approvedby:
+          type: string
+          nullable: true
+          maxLength: 255
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedAccountPayment:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        memberid:
+          type: string
+          nullable: true
+          maxLength: 100
+        date:
+          type: string
+          format: date
+          nullable: true
+        payerfullname:
+          type: string
+          maxLength: 255
+        accountname:
+          type: string
+          maxLength: 255
+        accounttype:
+          type: string
+          nullable: true
+          maxLength: 100
+        currency:
+          type: string
+          nullable: true
+          maxLength: 255
+        amount:
+          type: string
+          maxLength: 255
+        payinby:
+          type: string
+          nullable: true
+          title: Payin By
+          maxLength: 255
+        paymentmethod:
+          type: string
+          maxLength: 255
+        cheq_chequenumber:
+          type: string
+          nullable: true
+          maxLength: 255
+        cheq_micrcode:
+          type: string
+          nullable: true
+          maxLength: 255
+        cheq_accountnumber:
+          type: string
+          nullable: true
+          maxLength: 255
+        wirtrans_accountnumber:
+          type: string
+          nullable: true
+          maxLength: 255
+        instantpledge:
+          type: boolean
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedAccountSetup:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        accountname:
+          type: string
+          nullable: true
+          maxLength: 255
+        accounttype:
+          type: string
+          nullable: true
+          maxLength: 255
+        purpose:
+          type: string
+          nullable: true
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedAdvancedUser:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        photograph:
+          type: string
+          format: uri
+          nullable: true
+        userid:
+          type: string
+          nullable: true
+          maxLength: 255
+        firstname:
+          type: string
+          nullable: true
+          maxLength: 255
+        middlename:
+          type: string
+          nullable: true
+          maxLength: 255
+        lastname:
+          type: string
+          nullable: true
+          maxLength: 255
+        gender:
+          type: string
+          nullable: true
+          maxLength: 255
+        dateofbirth:
+          type: string
+          format: date
+          nullable: true
+        telephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        email:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        country:
+          type: string
+          nullable: true
+          maxLength: 255
+        levelofeducation:
+          type: string
+          nullable: true
+          maxLength: 255
+        salesskills:
+          type: string
+          nullable: true
+          maxLength: 255
+        summary:
+          type: string
+          nullable: true
+          maxLength: 255
+        curriculumvitae:
+          type: string
+          format: uri
+          nullable: true
+        username:
+          type: string
+          nullable: true
+          maxLength: 255
+        password:
+          type: string
+          nullable: true
+          maxLength: 255
+        role:
+          type: string
+          nullable: true
+          maxLength: 255
+        module_profile:
+          type: boolean
+        module_sales:
+          type: boolean
+        module_documentation:
+          type: boolean
+        module_admin:
+          type: boolean
+        module_church:
+          type: boolean
+        module_chat:
+          type: boolean
+        module_system:
+          type: boolean
+        confirmed:
+          type: boolean
+        user:
+          type: integer
+    PatchedAttendanceProgram:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        programid:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        date:
+          type: string
+          format: date
+          nullable: true
+        attendancetype:
+          type: string
+          nullable: true
+          maxLength: 255
+        male:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        female:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        children:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        total:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        status:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedBranchReport:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        fulltext:
+          type: string
+          nullable: true
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedBranches:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        subhead:
+          type: string
+          nullable: true
+          maxLength: 50
+        branchname:
+          type: string
+          nullable: true
+          maxLength: 255
+        subheadalias:
+          type: string
+          nullable: true
+          maxLength: 255
+        branchphotograph:
+          type: string
+          format: uri
+          nullable: true
+        slug:
+          type: string
+          nullable: true
+          maxLength: 255
+          pattern: ^[-a-zA-Z0-9_]+$
+        location:
+          type: string
+          nullable: true
+          maxLength: 255
+        country:
+          type: string
+          nullable: true
+          maxLength: 255
+        residentialaddress:
+          type: string
+          nullable: true
+        postaladdress:
+          type: string
+          nullable: true
+        telephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        fax:
+          type: string
+          nullable: true
+          maxLength: 255
+        email:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        website:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 255
+        headfullname:
+          type: string
+          nullable: true
+          maxLength: 255
+        headtelephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        heademail:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        headposition:
+          type: string
+          nullable: true
+          maxLength: 255
+        paymentplan:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/PaymentplanEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        chargeamount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,253}(?:\.\d{0,2})?$
+        nextchargedate:
+          type: string
+          format: date
+          nullable: true
+        keycode:
+          type: string
+          nullable: true
+          maxLength: 255
+        connectedtoserver:
+          type: boolean
+        module_dashboard:
+          type: boolean
+        module_members:
+          type: boolean
+        module_members_add:
+          type: boolean
+        module_members_update:
+          type: boolean
+        module_members_delete:
+          type: boolean
+        module_guests:
+          type: boolean
+        module_guests_add:
+          type: boolean
+        module_guests_update:
+          type: boolean
+        module_guests_delete:
+          type: boolean
+        module_attendance:
+          type: boolean
+        module_notifier:
+          type: boolean
+        module_notifier_sms:
+          type: boolean
+        module_notifier_emails:
+          type: boolean
+        module_notifier_mobileapp:
+          type: boolean
+        module_notifier_settings:
+          type: boolean
+        module_finance:
+          type: boolean
+        module_finance_individualincome:
+          type: boolean
+        module_finance_bulkincome:
+          type: boolean
+        module_finance_expenditure:
+          type: boolean
+        module_finance_accountsetup:
+          type: boolean
+        module_reports:
+          type: boolean
+        module_reports_branch:
+          type: boolean
+        module_reports_subbranch:
+          type: boolean
+        module_administration:
+          type: boolean
+        module_administration_branchprofile:
+          type: boolean
+        module_administration_branchusers:
+          type: boolean
+        module_administration_choices:
+          type: boolean
+        headquarters:
+          type: boolean
+        confirmed:
+          type: boolean
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+    PatchedChurch:
+      type: object
+      properties:
+        identifier:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        logo:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+        motto:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone:
+          type: string
+          maxLength: 100
+        email:
+          type: string
+          maxLength: 100
+        owner_first_name:
+          type: string
+          maxLength: 100
+        owner_last_name:
+          type: string
+          maxLength: 100
+        owner_fullname:
+          type: string
+          nullable: true
+          maxLength: 100
+        owner_phone:
+          type: string
+          maxLength: 100
+        owner_email:
+          type: string
+          format: email
+          maxLength: 100
+        owner_username:
+          type: string
+          maxLength: 100
+        password:
+          type: string
+          nullable: true
+          maxLength: 100
+        confirm_password:
+          type: string
+          nullable: true
+          maxLength: 100
+        address:
+          type: string
+          nullable: true
+          maxLength: 1000
+        postal:
+          type: string
+          nullable: true
+          maxLength: 1000
+        bank_name:
+          type: string
+          nullable: true
+          maxLength: 100
+        bank_account_number:
+          type: string
+          nullable: true
+          maxLength: 100
+        active:
+          type: boolean
+        payment_plan:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/PaymentPlanEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        next_expiry_date:
+          type: string
+          format: date
+          nullable: true
+    PatchedChurchGroup:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        churchgroup:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedEmailSent:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        subject:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        accordingto:
+          type: string
+          nullable: true
+          maxLength: 255
+        fromaddr:
+          type: string
+          nullable: true
+          maxLength: 255
+        toaddr:
+          type: string
+          nullable: true
+          maxLength: 255
+        sentstatus:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedFeatures:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        slug:
+          type: string
+          nullable: true
+          maxLength: 100
+          pattern: ^[-a-zA-Z0-9_]+$
+        featureshortname:
+          type: string
+          nullable: true
+          maxLength: 100
+        featurelongname:
+          type: string
+          nullable: true
+          maxLength: 255
+        featureicon:
+          type: string
+          format: uri
+          nullable: true
+        featureshortdescription:
+          type: string
+          nullable: true
+        featurelongdescription:
+          type: string
+          nullable: true
+        ordernumber:
+          type: string
+          nullable: true
+          maxLength: 100
+        featurecolor:
+          type: string
+          nullable: true
+          maxLength: 100
+        activestatus:
+          type: boolean
+    PatchedGuest:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        guestid:
+          type: string
+          nullable: true
+          maxLength: 100
+        photograph:
+          type: string
+          format: uri
+          nullable: true
+        title:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/TitleEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        firstname:
+          type: string
+          nullable: true
+          maxLength: 100
+        middlename:
+          type: string
+          nullable: true
+          maxLength: 100
+        lastname:
+          type: string
+          nullable: true
+          maxLength: 100
+        gender:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/GenderEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        dateofbirth:
+          type: string
+          format: date
+          nullable: true
+        placeofbirth:
+          type: string
+          nullable: true
+          maxLength: 100
+        occupation:
+          type: string
+          nullable: true
+          maxLength: 100
+        homeaddress:
+          type: string
+          nullable: true
+        postaladdress:
+          type: string
+          nullable: true
+        phonenumber1:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone1_rnotif:
+          type: boolean
+        phonenumber2:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone2_rnotif:
+          type: boolean
+        emailaddress1:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 100
+        email1_rnotif:
+          type: boolean
+        emailaddress2:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 100
+        email2_rnotif:
+          type: boolean
+        invitedby:
+          type: string
+          nullable: true
+          maxLength: 100
+        purposeofvisit:
+          type: string
+          nullable: true
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedMember:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        memberid:
+          type: string
+          nullable: true
+          maxLength: 100
+        deviceid:
+          type: string
+          nullable: true
+          maxLength: 100
+        photograph:
+          type: string
+          format: uri
+          nullable: true
+        title:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/TitleEnum'
+          - $ref: '#/components/schemas/BlankEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        firstname:
+          type: string
+          nullable: true
+          maxLength: 100
+        middlename:
+          type: string
+          nullable: true
+          maxLength: 100
+        lastname:
+          type: string
+          nullable: true
+          maxLength: 100
+        gender:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/GenderEnum'
+          - $ref: '#/components/schemas/BlankEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        dateofbirth:
+          type: string
+          format: date
+          nullable: true
+        placeofbirth:
+          type: string
+          nullable: true
+          maxLength: 100
+        occupation:
+          type: string
+          nullable: true
+          maxLength: 100
+        homeaddress:
+          type: string
+          nullable: true
+        postaladdress:
+          type: string
+          nullable: true
+        phonenumber1:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone1_rnotif:
+          type: boolean
+        phonenumber2:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone2_rnotif:
+          type: boolean
+        emailaddress1:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 100
+        email1_rnotif:
+          type: boolean
+        emailaddress2:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 100
+        email2_rnotif:
+          type: boolean
+        pushdeviceid:
+          type: string
+          nullable: true
+          maxLength: 100
+        pushdeviceid_rnotif:
+          type: boolean
+        datebornagain:
+          type: string
+          format: date
+          nullable: true
+        datebaptised:
+          type: string
+          format: date
+          nullable: true
+        churchgroups:
+          type: string
+          nullable: true
+          maxLength: 100
+        ministerialposition:
+          type: string
+          nullable: true
+          maxLength: 100
+        convert:
+          type: boolean
+        activestatus:
+          type: boolean
+        deleted:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedNotifierSettings:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        sms_sender:
+          type: string
+          maxLength: 11
+        sms_verification:
+          type: boolean
+        sms_verification_status:
+          type: string
+          nullable: true
+          maxLength: 100
+        phone_countrycode:
+          type: string
+          nullable: true
+          maxLength: 255
+        email_from:
+          type: string
+          format: email
+          maxLength: 255
+        notifierpoints:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        rnotif_memberadd:
+          type: boolean
+        rnotif_guestadd:
+          type: boolean
+        rnotif_financeadd:
+          type: boolean
+        lastmodified:
+          type: string
+          format: date-time
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedProfile:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        country:
+          type: string
+          nullable: true
+          maxLength: 100
+        churchname:
+          type: string
+          nullable: true
+          maxLength: 255
+        slug:
+          type: string
+          nullable: true
+          maxLength: 255
+          pattern: ^[-a-zA-Z0-9_]+$
+        residentialaddress:
+          type: string
+          nullable: true
+        postaladdress:
+          type: string
+          nullable: true
+        telephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        email:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        website:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 255
+        logo:
+          type: string
+          format: uri
+          nullable: true
+        motto:
+          type: string
+          nullable: true
+          maxLength: 255
+        colours:
+          type: string
+          nullable: true
+          maxLength: 100
+        registererfullname:
+          type: string
+          nullable: true
+          maxLength: 255
+        registereremail:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        registerertelephonecode:
+          type: string
+          nullable: true
+          maxLength: 255
+        registerertelephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        registererusername:
+          type: string
+          nullable: true
+          maxLength: 255
+        registererpassword:
+          type: string
+          nullable: true
+          maxLength: 255
+        securityquestion:
+          type: string
+          nullable: true
+          maxLength: 255
+        securityanswer:
+          type: string
+          nullable: true
+          maxLength: 255
+        totalnotifierpoints:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        assignednotifierpoints:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        freenotifierpoints:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        module_dashboard:
+          type: boolean
+        module_branches:
+          type: boolean
+        module_branchusers:
+          type: boolean
+        module_members:
+          type: boolean
+        module_members_add:
+          type: boolean
+        module_members_update:
+          type: boolean
+        module_members_delete:
+          type: boolean
+        module_guests:
+          type: boolean
+        module_guests_add:
+          type: boolean
+        module_guests_update:
+          type: boolean
+        module_guests_delete:
+          type: boolean
+        module_attendance:
+          type: boolean
+        module_notifier:
+          type: boolean
+        module_notifier_sms:
+          type: boolean
+        module_notifier_emails:
+          type: boolean
+        module_notifier_mobileapp:
+          type: boolean
+        module_notifier_settings:
+          type: boolean
+        module_finance:
+          type: boolean
+        module_finance_individualincome:
+          type: boolean
+        module_finance_bulkincome:
+          type: boolean
+        module_finance_expenditure:
+          type: boolean
+        module_finance_trialbalance:
+          type: boolean
+        module_finance_balancesheet:
+          type: boolean
+        module_finance_finalaccounts:
+          type: boolean
+        module_finance_accountsetup:
+          type: boolean
+        module_branchreport:
+          type: boolean
+        module_grandreport:
+          type: boolean
+        module_support:
+          type: boolean
+        module_administration:
+          type: boolean
+        module_administration_payment:
+          type: boolean
+        module_administration_profile:
+          type: boolean
+        module_administration_branchprofile:
+          type: boolean
+        module_administration_branchusers:
+          type: boolean
+        module_administration_choices:
+          type: boolean
+        code:
+          type: string
+          nullable: true
+          maxLength: 200
+        deactivated:
+          type: boolean
+        user:
+          type: integer
+    PatchedPushSent:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        deviceid:
+          type: string
+          nullable: true
+          maxLength: 255
+        mediafile:
+          type: string
+          format: uri
+          nullable: true
+        title:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        accordingto:
+          type: string
+          nullable: true
+          maxLength: 255
+        sentstatus:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedRegister:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        churchname:
+          type: string
+          nullable: true
+          maxLength: 255
+        registererfullname:
+          type: string
+          nullable: true
+          maxLength: 255
+        registereremail:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        registerertelephonecode:
+          type: string
+          nullable: true
+          maxLength: 255
+        registerertelephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        paymentplan:
+          type: string
+          nullable: true
+          maxLength: 255
+        country:
+          type: string
+          nullable: true
+          maxLength: 100
+        code:
+          type: string
+          nullable: true
+          maxLength: 100
+        confirmed:
+          type: boolean
+        expired_date:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+    PatchedSales:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        premiumamount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,99}(?:\.\d{0,1})?$
+          nullable: true
+        packagetype:
+          type: string
+          nullable: true
+          maxLength: 255
+        commissionrate:
+          type: string
+          nullable: true
+          maxLength: 255
+        commissionamount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,99}(?:\.\d{0,1})?$
+          nullable: true
+        commissionagentid:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedSalesUserAccount:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        userid:
+          type: string
+          nullable: true
+          maxLength: 255
+        amount:
+          type: string
+          nullable: true
+          maxLength: 255
+        activestatus:
+          type: boolean
+        user:
+          type: integer
+          nullable: true
+    PatchedSmsSent:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        senderid:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        accordingto:
+          type: string
+          nullable: true
+          maxLength: 255
+        phonenumbers:
+          type: string
+          nullable: true
+          maxLength: 255
+        sentstatus:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+    PatchedTechChat:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        role:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        target:
+          type: string
+          nullable: true
+          maxLength: 255
+        sent:
+          type: boolean
+        received:
+          type: boolean
+        read:
+          type: boolean
+        resolved:
+          type: boolean
+        chatuser:
+          type: integer
+          nullable: true
+    PatchedTechChatTicket:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        role:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        target:
+          type: string
+          nullable: true
+          maxLength: 255
+        sent:
+          type: boolean
+        received:
+          type: boolean
+        read:
+          type: boolean
+        resolved:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+        chatuser:
+          type: integer
+          nullable: true
+        chatadmin:
+          type: integer
+          nullable: true
+    PatchedTelephony:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        countrycode:
+          type: string
+          nullable: true
+          maxLength: 100
+        country:
+          type: string
+          nullable: true
+          maxLength: 100
+        nowithcountrycode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        nowithoutcountrycode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        supportednetworks:
+          type: string
+          nullable: true
+          maxLength: 200
+        nonetstartwith:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+    PatchedTestimonies:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        fullname:
+          type: string
+          nullable: true
+          maxLength: 255
+        subinfo:
+          type: string
+          nullable: true
+          maxLength: 255
+        testimony:
+          type: string
+          nullable: true
+        photograph:
+          type: string
+          format: uri
+          nullable: true
+        activestatus:
+          type: boolean
+    PaymentPlanEnum:
+      enum:
+      - Free
+      - Basic
+      - Gold
+      - Diamond
+      type: string
+      description: |-
+        * `Free` - Free
+        * `Basic` - Basic
+        * `Gold` - Gold
+        * `Diamond` - Diamond
+    PaymentplanEnum:
+      enum:
+      - Basic
+      - Gold
+      - Diamond
+      type: string
+      description: |-
+        * `Basic` - Basic
+        * `Gold` - Gold
+        * `Diamond` - Diamond
+    Profile:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        country:
+          type: string
+          nullable: true
+          maxLength: 100
+        churchname:
+          type: string
+          nullable: true
+          maxLength: 255
+        slug:
+          type: string
+          nullable: true
+          maxLength: 255
+          pattern: ^[-a-zA-Z0-9_]+$
+        residentialaddress:
+          type: string
+          nullable: true
+        postaladdress:
+          type: string
+          nullable: true
+        telephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        email:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        website:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 255
+        logo:
+          type: string
+          format: uri
+          nullable: true
+        motto:
+          type: string
+          nullable: true
+          maxLength: 255
+        colours:
+          type: string
+          nullable: true
+          maxLength: 100
+        registererfullname:
+          type: string
+          nullable: true
+          maxLength: 255
+        registereremail:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        registerertelephonecode:
+          type: string
+          nullable: true
+          maxLength: 255
+        registerertelephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        registererusername:
+          type: string
+          nullable: true
+          maxLength: 255
+        registererpassword:
+          type: string
+          nullable: true
+          maxLength: 255
+        securityquestion:
+          type: string
+          nullable: true
+          maxLength: 255
+        securityanswer:
+          type: string
+          nullable: true
+          maxLength: 255
+        totalnotifierpoints:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        assignednotifierpoints:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        freenotifierpoints:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        module_dashboard:
+          type: boolean
+        module_branches:
+          type: boolean
+        module_branchusers:
+          type: boolean
+        module_members:
+          type: boolean
+        module_members_add:
+          type: boolean
+        module_members_update:
+          type: boolean
+        module_members_delete:
+          type: boolean
+        module_guests:
+          type: boolean
+        module_guests_add:
+          type: boolean
+        module_guests_update:
+          type: boolean
+        module_guests_delete:
+          type: boolean
+        module_attendance:
+          type: boolean
+        module_notifier:
+          type: boolean
+        module_notifier_sms:
+          type: boolean
+        module_notifier_emails:
+          type: boolean
+        module_notifier_mobileapp:
+          type: boolean
+        module_notifier_settings:
+          type: boolean
+        module_finance:
+          type: boolean
+        module_finance_individualincome:
+          type: boolean
+        module_finance_bulkincome:
+          type: boolean
+        module_finance_expenditure:
+          type: boolean
+        module_finance_trialbalance:
+          type: boolean
+        module_finance_balancesheet:
+          type: boolean
+        module_finance_finalaccounts:
+          type: boolean
+        module_finance_accountsetup:
+          type: boolean
+        module_branchreport:
+          type: boolean
+        module_grandreport:
+          type: boolean
+        module_support:
+          type: boolean
+        module_administration:
+          type: boolean
+        module_administration_payment:
+          type: boolean
+        module_administration_profile:
+          type: boolean
+        module_administration_branchprofile:
+          type: boolean
+        module_administration_branchusers:
+          type: boolean
+        module_administration_choices:
+          type: boolean
+        code:
+          type: string
+          nullable: true
+          maxLength: 200
+        deactivated:
+          type: boolean
+        user:
+          type: integer
+      required:
+      - id
+      - user
+    PushSent:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        deviceid:
+          type: string
+          nullable: true
+          maxLength: 255
+        mediafile:
+          type: string
+          format: uri
+          nullable: true
+        title:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        accordingto:
+          type: string
+          nullable: true
+          maxLength: 255
+        sentstatus:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    Register:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        churchname:
+          type: string
+          nullable: true
+          maxLength: 255
+        registererfullname:
+          type: string
+          nullable: true
+          maxLength: 255
+        registereremail:
+          type: string
+          format: email
+          nullable: true
+          maxLength: 255
+        registerertelephonecode:
+          type: string
+          nullable: true
+          maxLength: 255
+        registerertelephone:
+          type: string
+          nullable: true
+          maxLength: 255
+        paymentplan:
+          type: string
+          nullable: true
+          maxLength: 255
+        country:
+          type: string
+          nullable: true
+          maxLength: 100
+        code:
+          type: string
+          nullable: true
+          maxLength: 100
+        confirmed:
+          type: boolean
+        expired_date:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+      required:
+      - id
+    Sales:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        premiumamount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,99}(?:\.\d{0,1})?$
+          nullable: true
+        packagetype:
+          type: string
+          nullable: true
+          maxLength: 255
+        commissionrate:
+          type: string
+          nullable: true
+          maxLength: 255
+        commissionamount:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,99}(?:\.\d{0,1})?$
+          nullable: true
+        commissionagentid:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    SalesUserAccount:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        userid:
+          type: string
+          nullable: true
+          maxLength: 255
+        amount:
+          type: string
+          nullable: true
+          maxLength: 255
+        activestatus:
+          type: boolean
+        user:
+          type: integer
+          nullable: true
+      required:
+      - id
+    SmsSent:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        senderid:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        accordingto:
+          type: string
+          nullable: true
+          maxLength: 255
+        phonenumbers:
+          type: string
+          nullable: true
+          maxLength: 255
+        sentstatus:
+          type: string
+          nullable: true
+          maxLength: 255
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+      required:
+      - id
+    TechChat:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        role:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        target:
+          type: string
+          nullable: true
+          maxLength: 255
+        sent:
+          type: boolean
+        received:
+          type: boolean
+        read:
+          type: boolean
+        resolved:
+          type: boolean
+        chatuser:
+          type: integer
+          nullable: true
+      required:
+      - id
+    TechChatTicket:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        role:
+          type: string
+          nullable: true
+          maxLength: 255
+        message:
+          type: string
+          nullable: true
+          maxLength: 255
+        target:
+          type: string
+          nullable: true
+          maxLength: 255
+        sent:
+          type: boolean
+        received:
+          type: boolean
+        read:
+          type: boolean
+        resolved:
+          type: boolean
+        church:
+          type: string
+          format: uuid
+          nullable: true
+        branch:
+          type: integer
+          nullable: true
+        chatuser:
+          type: integer
+          nullable: true
+        chatadmin:
+          type: integer
+          nullable: true
+      required:
+      - id
+    Telephony:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        countrycode:
+          type: string
+          nullable: true
+          maxLength: 100
+        country:
+          type: string
+          nullable: true
+          maxLength: 100
+        nowithcountrycode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        nowithoutcountrycode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        supportednetworks:
+          type: string
+          nullable: true
+          maxLength: 200
+        nonetstartwith:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+      required:
+      - id
+    Testimonies:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        fullname:
+          type: string
+          nullable: true
+          maxLength: 255
+        subinfo:
+          type: string
+          nullable: true
+          maxLength: 255
+        testimony:
+          type: string
+          nullable: true
+        photograph:
+          type: string
+          format: uri
+          nullable: true
+        activestatus:
+          type: boolean
+      required:
+      - id
+    TitleEnum:
+      enum:
+      - Mr
+      - Mrs
+      - Ms
+      type: string
+      description: |-
+        * `Mr` - Mr
+        * `Mrs` - Mrs
+        * `Ms` - Ms
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Token-based authentication with required prefix "Token"
+x-tagGroups:
+- name: Accounts
+  tags:
+  - Churchs
+  - Accounts
+  - Sign In
+  - Sign Up
+  - Reset Password
+  - Reset Password Confirm
+- name: Administration
+  tags:
+  - Church Group
+  - Choice
+- name: Attendance
+  tags:
+  - Attendance Program
+  - Attendance
+- name: Branches
+  tags:
+  - Branch
+  - Branch User
+- name: Church Profile
+  tags:
+  - Register
+  - Profile
+- name: Finance
+  tags:
+  - Account Setup
+  - Account Payment
+  - Account Expenditure
+- name: Guests
+  tags:
+  - Guest
+- name: Index
+  tags:
+  - Testimony
+  - Feature
+  - Email Subscription
+- name: Members
+  tags:
+  - Member
+- name: Notifier
+  tags:
+  - Notifier Setting
+  - Sent Sms
+  - Sent Emails
+  - Sent Push
+  - Telephony
+- name: Reports
+  tags:
+  - Branch Report
+- name: Tech Panels
+  tags:
+  - Advanced User
+  - Sales User Account
+  - Sales
+  - Tech Chat Ticket
+  - Tech Chat
+tags:
+- name: Churchs
+- name: Accounts
+- name: Sign In
+- name: Sign Up
+- name: Reset Password
+- name: Reset Password Confirm
+- name: Church Group
+- name: Choice
+- name: Attendance Program
+- name: Attendance
+- name: Branches
+- name: Branch Users
+- name: Register
+- name: Profile
+- name: Account Setup
+- name: Account Payment
+- name: Account Expenditure
+- name: Guest
+- name: Testimony
+- name: Feature
+- name: Email Subscription
+- name: Member
+- name: Notifier Setting
+- name: Sent Sms
+- name: Sent Email
+- name: Sent Push
+- name: Telephones
+- name: Branch Report
+- name: Advanced User
+- name: Sales User Account
+- name: Sales
+- name: Tech Chat Ticket
+- name: Tech Chat

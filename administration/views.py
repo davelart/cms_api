@@ -7,12 +7,12 @@ from drf_spectacular.utils import extend_schema, extend_schema_view
 
 # Create your views here.
 @extend_schema_view(
-    list=extend_schema(tags=['ChurchGroup'], summary='List all ChurchGroups'),
-    create=extend_schema(tags=['ChurchGroup'], summary='Create a ChurchGroup'),
-    retrieve=extend_schema(tags=['ChurchGroup'], summary='Get a ChurchGroup', examples=[]),
-    update=extend_schema(tags=['ChurchGroup'], summary='Update a ChurchGroup', examples=[]),
-    partial_update=extend_schema(tags=['ChurchGroup'], summary='Patch a ChurchGroup', examples=[]),
-    destroy=extend_schema(tags=['ChurchGroup'], summary='Delete a ChurchGroup', examples=[]),
+    list=extend_schema(tags=['Church Group'], summary='List all Church Groups'),
+    create=extend_schema(tags=['Church Group'], summary='Create a Church Group'),
+    retrieve=extend_schema(tags=['Church Group'], summary='Get a Church Group', examples=[]),
+    update=extend_schema(tags=['Church Group'], summary='Update a Church Group', examples=[]),
+    partial_update=extend_schema(tags=['Church Group'], summary='Patch a Church Group', examples=[]),
+    destroy=extend_schema(tags=['Church Group'], summary='Delete a Church Group', examples=[]),
 )
 class ChurchGroupsViewSet(ModelViewSet):
     

@@ -3,7 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 from branches.models import Branches
-from churchprofile.models import ChurchProfile
+from accounts.models import Church
 
 class AdvancedUser(models.Model):
 	photograph = models.ImageField(upload_to = 'advancedusersphotos', blank=True, null=True)
@@ -51,7 +51,7 @@ class SalesUserAccount(models.Model):
 
 
 class Sales(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name='sales_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='sales_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='sales_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	premiumamount = models.DecimalField(max_digits=100, decimal_places=1, blank=True, null=True )
 	packagetype = models.CharField(max_length=255, blank=True, null=True )
@@ -64,7 +64,7 @@ class Sales(models.Model):
 		return self.commissionagentid
 
 class TechChatTicket(models.Model):
-	church = models.ForeignKey(ChurchProfile, related_name='techchatticket_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='techchatticket_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='chatticket_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)	
 	chatuser = models.ForeignKey(User, related_name='chatticketuser', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	chatadmin = models.ForeignKey(User, related_name="chatticketadmin", default='', blank=True, null=True, on_delete=models.SET_NULL)
@@ -81,7 +81,7 @@ class TechChatTicket(models.Model):
 		return self.message
 
 class TechChat(models.Model):
-	# church = models.ForeignKey(ChurchProfile, related_name='techchat_church', default='')
+	# church = models.ForeignKey(Church, related_name='techchat_church', default='')
 	# branch = models.ForeignKey(Branches, related_name='techchat_branch', default='')	
 	chatuser = models.ForeignKey(User, related_name='chatuser', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	role = models.CharField(max_length=255, blank=True, null=True)

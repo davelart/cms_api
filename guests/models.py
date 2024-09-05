@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 from branches.models import Branches
-from churchprofile.models import ChurchProfile
+from accounts.models import Church
 
 class Guests(models.Model):
 	# title choices
@@ -11,7 +11,7 @@ class Guests(models.Model):
 	# gender choices
 	GENDER_CHOICES = (('Male','Male'), ('Female','Female'), ('None', 'None'))
 	
-	church = models.ForeignKey(ChurchProfile, related_name='guest_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+	church = models.ForeignKey(Church, related_name='guest_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	branch = models.ForeignKey(Branches, related_name='guest_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
 	guestid = models.CharField(max_length=100, blank=True, null=True )
 	photograph = models.ImageField(upload_to = 'guestphotos', blank=True, null=True )

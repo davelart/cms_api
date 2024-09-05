@@ -2,10 +2,10 @@ from django.db import models
 from django.utils import timezone
 
 from branches.models import Branches
-from churchprofile.models import ChurchProfile
+from accounts.models import Church
 
 class AccountSetup(models.Model):	
-    church = models.ForeignKey(ChurchProfile, related_name='accountsetup_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+    church = models.ForeignKey(Church, related_name='accountsetup_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
     branch = models.ForeignKey(Branches, related_name='accountsetup_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
     accountname = models.CharField(max_length=255, blank=True, null=True, default='')
     accounttype = models.CharField(max_length=255, blank=True, null=True, default='')
@@ -18,7 +18,7 @@ class AccountSetup(models.Model):
 
 class AccountPayment(models.Model):    
     # gender choices
-    church = models.ForeignKey(ChurchProfile, related_name='accpayment_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+    church = models.ForeignKey(Church, related_name='accpayment_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
     branch = models.ForeignKey(Branches, related_name='accpayment_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
     memberid = models.CharField(max_length=100, blank=True, null=True)
     date = models.DateField(blank=True, null=True )
@@ -41,7 +41,7 @@ class AccountPayment(models.Model):
         return self.accountname
 
 class AccountExpenditure(models.Model):
-    church = models.ForeignKey(ChurchProfile, related_name='accexpenditure_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
+    church = models.ForeignKey(Church, related_name='accexpenditure_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
     branch = models.ForeignKey(Branches, related_name='accexpenditure_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)
     date = models.DateField(blank=True, null=True )
     title = models.CharField(max_length=255)

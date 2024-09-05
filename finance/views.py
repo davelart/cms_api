@@ -6,12 +6,12 @@ from rest_framework.viewsets import ModelViewSet
 from drf_spectacular.utils import extend_schema, extend_schema_view
 
 @extend_schema_view(
-    list=extend_schema(tags=['AccountSetup'], summary='List all AccountSetups'),
-    create=extend_schema(tags=['AccountSetup'], summary='Create a AccountSetup'),
-    retrieve=extend_schema(tags=['AccountSetup'], summary='Get a AccountSetup', examples=[]),
-    update=extend_schema(tags=['AccountSetup'], summary='Update a AccountSetup', examples=[]),
-    partial_update=extend_schema(tags=['AccountSetup'], summary='Patch a AccountSetup', examples=[]),
-    destroy=extend_schema(tags=['AccountSetup'], summary='Delete a AccountSetup', examples=[]),
+    list=extend_schema(tags=['Account Setup'], summary='List all Account Setups'),
+    create=extend_schema(tags=['Account Setup'], summary='Create a Account Setup'),
+    retrieve=extend_schema(tags=['Account Setup'], summary='Get a Account Setup', examples=[]),
+    update=extend_schema(tags=['Account Setup'], summary='Update a Account Setup', examples=[]),
+    partial_update=extend_schema(tags=['Account Setup'], summary='Patch a Account Setup', examples=[]),
+    destroy=extend_schema(tags=['Account Setup'], summary='Delete a Account Setup', examples=[]),
 )
 class AccountSetupViewSet(ModelViewSet):
     
@@ -23,12 +23,12 @@ class AccountSetupViewSet(ModelViewSet):
         return AccountSetup.objects.all()
     
 @extend_schema_view(
-    list=extend_schema(tags=['AccountPayment'], summary='List all AccountPayments'),
-    create=extend_schema(tags=['AccountPayment'], summary='Create a AccountPayment'),
-    retrieve=extend_schema(tags=['AccountPayment'], summary='Get a AccountPayment', examples=[]),
-    update=extend_schema(tags=['AccountPayment'], summary='Update a AccountPayment', examples=[]),
-    partial_update=extend_schema(tags=['AccountPayment'], summary='Patch a AccountPayment', examples=[]),
-    destroy=extend_schema(tags=['AccountPayment'], summary='Delete a AccountPayment', examples=[]),
+    list=extend_schema(tags=['Account Payment'], summary='List all Account Payments'),
+    create=extend_schema(tags=['Account Payment'], summary='Create a Account Payment'),
+    retrieve=extend_schema(tags=['Account Payment'], summary='Get a Account Payment', examples=[]),
+    update=extend_schema(tags=['Account Payment'], summary='Update a Account Payment', examples=[]),
+    partial_update=extend_schema(tags=['Account Payment'], summary='Patch a Account Payment', examples=[]),
+    destroy=extend_schema(tags=['Account Payment'], summary='Delete a Account Payment', examples=[]),
 )
 class AccountPaymentViewSet(ModelViewSet):
     
@@ -40,12 +40,12 @@ class AccountPaymentViewSet(ModelViewSet):
         return AccountPayment.objects.all()
     
 @extend_schema_view(
-    list=extend_schema(tags=['AccountExpenditure'], summary='List all AccountExpenditures'),
-    create=extend_schema(tags=['AccountExpenditure'], summary='Create a AccountExpenditure'),
-    retrieve=extend_schema(tags=['AccountExpenditure'], summary='Get a AccountExpenditure', examples=[]),
-    update=extend_schema(tags=['AccountExpenditure'], summary='Update a AccountExpenditure', examples=[]),
-    partial_update=extend_schema(tags=['AccountExpenditure'], summary='Patch a AccountExpenditure', examples=[]),
-    destroy=extend_schema(tags=['AccountExpenditure'], summary='Delete a AccountExpenditure', examples=[]),
+    list=extend_schema(tags=['Account Expenditure'], summary='List all Account Expenditures'),
+    create=extend_schema(tags=['Account Expenditure'], summary='Create a Account Expenditure'),
+    retrieve=extend_schema(tags=['Account Expenditure'], summary='Get a Account Expenditure', examples=[]),
+    update=extend_schema(tags=['Account Expenditure'], summary='Update a Account Expenditure', examples=[]),
+    partial_update=extend_schema(tags=['Account Expenditure'], summary='Patch a Account Expenditure', examples=[]),
+    destroy=extend_schema(tags=['Account Expenditure'], summary='Delete a Account Expenditure', examples=[]),
 )
 class AccountExpenditureViewSet(ModelViewSet):
     
