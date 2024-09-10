@@ -72,13 +72,14 @@ class SignInSerializer(TokenObtainPairSerializer):
 class SignUpSerializer(serializers.ModelSerializer):
   class Meta:
     model = Church
-    fields = ('name', 'first_name', 'last_name', 'phone', 'email', 'password', 'confirm_password' )
+    fields = ('name', 'first_name', 'last_name', 'phone', 'email', 'password', 'confirm_password', 'username' )
     extra_kwargs = {
       'name': {'required': True},
       'first_name': {'required': True},
       'last_name': {'required': True},
       'phone': {'required': True},
       'email': {'required': True},
+      'username': {'required': True},
       # 'date_of_birth': {'required': True},
       'password': {'required': True},
       'confirm_password': {'required': True},
@@ -87,8 +88,8 @@ class SignUpSerializer(serializers.ModelSerializer):
     }
   def validate(self, attrs):
     try:
-      user_exist =  User.objects.get(username=attrs['name'])
-      raise serializers.ValidationError({"name": "Username already Exists"})
+      user_exist =  User.objects.get(username=attrs['username'])
+      raise serializers.ValidationError({"username": "Username already Exists"})
     except User.DoesNotExist:
       pass
     
@@ -104,6 +105,7 @@ class SignUpSerializer(serializers.ModelSerializer):
         last_name=validated_data['last_name'],
         phone=validated_data['phone'],
         email=validated_data['email'],
+        username=validated_data['username'],
         # date_of_birth=validated_data['date_of_birth'],
         password=validated_data['password'],
         confirm_password=validated_data['confirm_password'],
