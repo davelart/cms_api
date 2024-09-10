@@ -72,7 +72,7 @@ class SignInSerializer(TokenObtainPairSerializer):
 class SignUpSerializer(serializers.ModelSerializer):
   class Meta:
     model = Church
-    fields = ('name', 'first_name', 'last_name', 'phone', 'email', 'password', 'confirm_password', 'payment_plan' )
+    fields = ('name', 'first_name', 'last_name', 'phone', 'email', 'password', 'confirm_password' )
     extra_kwargs = {
       'name': {'required': True},
       'first_name': {'required': True},
@@ -83,12 +83,12 @@ class SignUpSerializer(serializers.ModelSerializer):
       'password': {'required': True},
       'confirm_password': {'required': True},
       # 'country': {'required': True},
-      'payment_plan': {'required': True}
+      # 'payment_plan': {'required': True}
     }
   def validate(self, attrs):
     try:
-      user_exist =  User.objects.get(username=attrs['username'])
-      raise serializers.ValidationError({"username": "Username already Exists"})
+      user_exist =  User.objects.get(username=attrs['name'])
+      raise serializers.ValidationError({"name": "Username already Exists"})
     except User.DoesNotExist:
       pass
     
@@ -108,7 +108,7 @@ class SignUpSerializer(serializers.ModelSerializer):
         password=validated_data['password'],
         confirm_password=validated_data['confirm_password'],
         # country=validated_data['country'],
-        payment_plan=validated_data['payment_plan']
+        # payment_plan=validated_data['payment_plan']
         )
     return church
   
