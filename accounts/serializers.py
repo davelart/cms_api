@@ -43,7 +43,7 @@ class SignInSerializer(TokenObtainPairSerializer):
             
           data['role'] = 'Administrator'
           data['confirmed'] = account.confirmed if account is not None else ''
-          data['onboarded'] = account.onboarded if account is not None else ''
+          # data['onboarded'] = account.onboarded if account is not None else ''
           
           data['church'] = {
             "identifier":account.church.identifier if account.church is not None else '',

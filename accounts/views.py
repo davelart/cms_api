@@ -53,7 +53,7 @@ class AccountsViewSet(ModelViewSet):
     permission_classes = [IsAdminUser]
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['church']
-    search_fields = ['confirmed', 'onboarded']
+    search_fields = ['confirmed']
     ordering_fields = ['created']
     http_method_names = ["get", "post", "put", "patch"]
 
