@@ -6,6 +6,28 @@ from django.dispatch import receiver
 from django.utils import timezone
 from churchprofile.utils import generate_slug
 
+
+class Account(models.Model):
+    class Gender(models.TextChoices):
+        M = 'M', 'Male'
+        F = 'F', 'Female'
+
+    user = models.OneToOneField(User, related_name='accounts', on_delete=models.CASCADE, default=1)
+    gender = models.CharField(max_length=2, default=Gender.M, choices=Gender.choices)
+    photograph = models.URLField(blank=True, null=True)
+    phone = models.CharField(max_length=25, verbose_name='Phone Number', null=True)
+    date_of_birth = models.DateField(blank=True, null=True, verbose_name='Date of Birth')
+    residential_address = models.TextField(max_length=1000,blank=True, null=True, verbose_name='Residential Address')
+    # country = CountryField(default='GH')
+    confirmed = models.BooleanField(default=False)
+
+    @property
+    def full_name(self):
+        return f'{self.user.first_name} {self.user.last_name}'
+
+    def __str__(self):
+        return self.full_name
+
 class Register(models.Model):
 	churchname = models.CharField(max_length=255, blank=True, null=True)
 	registererfullname = models.CharField(max_length=255, blank=True, null=True)

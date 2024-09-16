@@ -1,9 +1,28 @@
 from django.shortcuts import render
 from rest_framework import generics
+from rest_framework import status, filters, exceptions
+from rest_framework.generics import ListAPIView
 from .models import Register, ChurchProfile
-from .serializers import RegisterSerializer, ProfileSerializer
+from .serializers import AccountProfileSerializer, RegisterSerializer, ProfileSerializer
 from rest_framework.viewsets import ModelViewSet
 from drf_spectacular.utils import extend_schema, extend_schema_view
+
+
+@extend_schema(
+    responses=AccountProfileSerializer,
+    operation_id="List Accounts",
+    description="Retrieves all accounts registered on Church Management Platform."
+                "Accounts can be **searched by first name, last name and email**, **filtered by confirmed,** "
+)
+class Accounts(ListAPIView):
+    serializer_class = AccountProfileSerializer
+    model = serializer_class.Meta.model
+    queryset = model.objects.all()
+    paginate_by = 50
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ['user__first_name', 'user__last_name', 'user__email']
+    ordering_fields = ['created']
+    filterset_fields = ['confirmed', 'user__is_active']
 
 @extend_schema_view(
     list=extend_schema(tags=['Register'], summary='List all Registers'),
