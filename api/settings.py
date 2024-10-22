@@ -194,16 +194,16 @@ WSGI_APPLICATION = 'api.wsgi.app'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
+DATABASES = { 
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.dvhsvicsaplwlwnwymyz',
-        'PASSWORD': 'myRedeemerLives@1',
-        'HOST': 'aws-0-us-east-1.pooler.supabase.com',
-        'PORT': 6543,
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST'),
+        'PORT': 5432,
         'OPTIONS': {
-            # 'sslmode': 'verify-full'
+            'sslmode': 'require'
         },
     },
 }
