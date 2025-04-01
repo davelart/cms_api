@@ -10,6 +10,7 @@ class Member(models.Model):
     #gender choices
     GENDER_CHOICES = (('Male', 'Male'), ('Female', 'Female'), ('None', 'None'))
     
+    identifier = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     church = models.ForeignKey(Church, related_name='members_church', default='', blank=True, null=True, on_delete=models.SET_NULL)
     branch = models.ForeignKey(Branches, related_name='member_branch', default='', blank=True, null=True, on_delete=models.SET_NULL)	
     memberid = models.CharField(max_length=100, blank=True, null=True )
